@@ -22,6 +22,12 @@
 		4480DF732BA47A33005454FD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF722BA47A33005454FD /* Environment.swift */; };
 		4480DF752BA47B6A005454FD /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF742BA47B6A005454FD /* NetworkConfiguration.swift */; };
 		4480DF772BA47BEC005454FD /* NetworkRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF762BA47BEC005454FD /* NetworkRequestService.swift */; };
+		4480DF7B2BA48E94005454FD /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF7A2BA48E94005454FD /* Coordinatable.swift */; };
+		4480DF7E2BA48F87005454FD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF7D2BA48F87005454FD /* AppCoordinator.swift */; };
+		4480DF802BA48F9F005454FD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF7F2BA48F9F005454FD /* Coordinator.swift */; };
+		4480DF822BA48FEA005454FD /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF812BA48FEA005454FD /* NavigationCoordinator.swift */; };
+		4480DF862BA490EF005454FD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF852BA490EF005454FD /* MainCoordinator.swift */; };
+		4480DF882BA4910F005454FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF872BA4910F005454FD /* DetailViewController.swift */; };
 		91A5070848C0602A3915876D /* Pods_Digio_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA50B71217E956D66A535BB /* Pods_Digio_Challenge.framework */; };
 		B642F8D8EBD2EE4A3367D32C /* Pods_Digio_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9C4361D70EA6B9E8BA70D /* Pods_Digio_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +69,12 @@
 		4480DF722BA47A33005454FD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		4480DF742BA47B6A005454FD /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		4480DF762BA47BEC005454FD /* NetworkRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestService.swift; sourceTree = "<group>"; };
+		4480DF7A2BA48E94005454FD /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		4480DF7D2BA48F87005454FD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4480DF7F2BA48F9F005454FD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4480DF812BA48FEA005454FD /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		4480DF852BA490EF005454FD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4480DF872BA4910F005454FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_Challenge_Digio_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,8 +177,9 @@
 		4480DF612BA462A5005454FD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4480DF702BA47A22005454FD /* Common */,
 				4480DF642BA47615005454FD /* Application */,
+				4480DF702BA47A22005454FD /* Common */,
+				4480DF782BA48E78005454FD /* Coordinator */,
 				4480DF652BA4761C005454FD /* Modules */,
 				4480DF632BA4760A005454FD /* Network */,
 			);
@@ -205,7 +218,9 @@
 		4480DF652BA4761C005454FD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4480DF352BA46048005454FD /* HomeViewController.swift */,
+				4480DF852BA490EF005454FD /* MainCoordinator.swift */,
+				4480DF832BA490D4005454FD /* Home */,
+				4480DF842BA490DB005454FD /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -242,6 +257,49 @@
 				4480DF722BA47A33005454FD /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		4480DF782BA48E78005454FD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF7D2BA48F87005454FD /* AppCoordinator.swift */,
+				4480DF7C2BA48F7F005454FD /* Classes */,
+				4480DF792BA48E86005454FD /* Protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4480DF792BA48E86005454FD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF7A2BA48E94005454FD /* Coordinatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4480DF7C2BA48F7F005454FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF7F2BA48F9F005454FD /* Coordinator.swift */,
+				4480DF812BA48FEA005454FD /* NavigationCoordinator.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4480DF832BA490D4005454FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF352BA46048005454FD /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4480DF842BA490DB005454FD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF872BA4910F005454FD /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		8CD069DC86465B7CF9561C5E /* Frameworks */ = {
@@ -474,13 +532,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4480DF7E2BA48F87005454FD /* AppCoordinator.swift in Sources */,
+				4480DF862BA490EF005454FD /* MainCoordinator.swift in Sources */,
 				4480DF362BA46048005454FD /* HomeViewController.swift in Sources */,
 				4480DF692BA4764F005454FD /* NetworkRequestable.swift in Sources */,
+				4480DF822BA48FEA005454FD /* NavigationCoordinator.swift in Sources */,
 				4480DF322BA46048005454FD /* AppDelegate.swift in Sources */,
 				4480DF732BA47A33005454FD /* Environment.swift in Sources */,
 				4480DF6F2BA47750005454FD /* NetworkErrorType.swift in Sources */,
 				4480DF6B2BA4770B005454FD /* NetworkEndpoint.swift in Sources */,
 				4480DF6D2BA4772A005454FD /* NetworkMethod.swift in Sources */,
+				4480DF802BA48F9F005454FD /* Coordinator.swift in Sources */,
+				4480DF7B2BA48E94005454FD /* Coordinatable.swift in Sources */,
+				4480DF882BA4910F005454FD /* DetailViewController.swift in Sources */,
 				4480DF772BA47BEC005454FD /* NetworkRequestService.swift in Sources */,
 				4480DF752BA47B6A005454FD /* NetworkConfiguration.swift in Sources */,
 			);
