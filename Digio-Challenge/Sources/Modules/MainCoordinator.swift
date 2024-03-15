@@ -2,12 +2,19 @@ import Foundation
 
 final class MainCoordinator: NavigationCoordinator {
     
-    private let homeViewController: HomeViewController = {
-        let vc = HomeViewController()
-        return vc
+    private lazy var homeBuilder: HomeBuilder = {
+        let homeBuilder = HomeBuilder(delegate: self)
+        return homeBuilder
     }()
     
     func start() {
-        viewController.setViewControllers([homeViewController], animated: true)
+        viewController.setViewControllers([homeBuilder.build()], animated: true)
+    }
+}
+
+// MARK: - HomeRouterDelegate
+extension MainCoordinator: HomeRouterDelegate {
+    func navigateToDetail() {
+        
     }
 }
