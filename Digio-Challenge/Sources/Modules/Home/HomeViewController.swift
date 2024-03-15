@@ -3,10 +3,15 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     // MARK: - Properties
+    private let router: HomeRouterInterface
     private let viewModel: HomeViewModelInterface
     
     // MARK: - Init
-    init(viewModel: HomeViewModelInterface) {
+    init(
+        router: HomeRouterInterface,
+        viewModel: HomeViewModelInterface
+    ) {
+        self.router = router
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -18,11 +23,19 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cyan
+        view.backgroundColor = .white
+        
+        viewModel.fetchData()
     }
 }
 
 // MARK: - HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
+    func fetchDataWithSuccess() {
+        print("SUCCESS")
+    }
     
+    func fetchDataWithError(message: String) {
+        print("Failure")
+    }
 }

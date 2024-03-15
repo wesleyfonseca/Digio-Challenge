@@ -12,9 +12,10 @@ final class HomeBuilder {
     
     // MARK: - Methods
     func build() -> HomeViewController {
+        let service = NetworkRequestService()
         let router = HomeRouter(delegate: homeDelegate)
-        let viewModel = HomeViewModel()
-        let viewController = HomeViewController(viewModel: viewModel)
+        let viewModel = HomeViewModel(service: service)
+        let viewController = HomeViewController(router: router, viewModel: viewModel)
         viewModel.delegate = viewController
         return viewController
     }
