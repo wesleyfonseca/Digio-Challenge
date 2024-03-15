@@ -1,10 +1,3 @@
-//
-//  Digio_ChallengeTests.swift
-//  Digio-ChallengeTests
-//
-//  Created by Wésley Fonseca on 15/03/24.
-//
-
 import XCTest
 @testable import Digio_Challenge
 

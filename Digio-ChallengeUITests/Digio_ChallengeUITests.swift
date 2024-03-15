@@ -1,10 +1,3 @@
-//
-//  Digio_ChallengeUITests.swift
-//  Digio-ChallengeUITests
-//
-//  Created by Wésley Fonseca on 15/03/24.
-//
-
 import XCTest
 
 final class Digio_ChallengeUITests: XCTestCase {
