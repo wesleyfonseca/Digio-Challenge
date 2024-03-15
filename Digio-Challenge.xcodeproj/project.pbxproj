@@ -15,6 +15,13 @@
 		4480DF492BA4604E005454FD /* Digio_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF482BA4604E005454FD /* Digio_ChallengeTests.swift */; };
 		4480DF532BA4604E005454FD /* Digio_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF522BA4604E005454FD /* Digio_ChallengeUITests.swift */; };
 		4480DF552BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF542BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift */; };
+		4480DF692BA4764F005454FD /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF682BA4764F005454FD /* NetworkRequestable.swift */; };
+		4480DF6B2BA4770B005454FD /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF6A2BA4770B005454FD /* NetworkEndpoint.swift */; };
+		4480DF6D2BA4772A005454FD /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF6C2BA4772A005454FD /* NetworkMethod.swift */; };
+		4480DF6F2BA47750005454FD /* NetworkErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF6E2BA47750005454FD /* NetworkErrorType.swift */; };
+		4480DF732BA47A33005454FD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF722BA47A33005454FD /* Environment.swift */; };
+		4480DF752BA47B6A005454FD /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF742BA47B6A005454FD /* NetworkConfiguration.swift */; };
+		4480DF772BA47BEC005454FD /* NetworkRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF762BA47BEC005454FD /* NetworkRequestService.swift */; };
 		91A5070848C0602A3915876D /* Pods_Digio_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA50B71217E956D66A535BB /* Pods_Digio_Challenge.framework */; };
 		B642F8D8EBD2EE4A3367D32C /* Pods_Digio_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9C4361D70EA6B9E8BA70D /* Pods_Digio_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +56,13 @@
 		4480DF4E2BA4604E005454FD /* Digio-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digio-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4480DF522BA4604E005454FD /* Digio_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_ChallengeUITests.swift; sourceTree = "<group>"; };
 		4480DF542BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4480DF682BA4764F005454FD /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		4480DF6A2BA4770B005454FD /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
+		4480DF6C2BA4772A005454FD /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		4480DF6E2BA47750005454FD /* NetworkErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorType.swift; sourceTree = "<group>"; };
+		4480DF722BA47A33005454FD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		4480DF742BA47B6A005454FD /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		4480DF762BA47BEC005454FD /* NetworkRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestService.swift; sourceTree = "<group>"; };
 		4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_Challenge_Digio_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +111,6 @@
 				617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */,
 				F4822B1273E4B05075959FFB /* Pods-Digio-ChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,8 +165,10 @@
 		4480DF612BA462A5005454FD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4480DF312BA46048005454FD /* AppDelegate.swift */,
-				4480DF352BA46048005454FD /* HomeViewController.swift */,
+				4480DF702BA47A22005454FD /* Common */,
+				4480DF642BA47615005454FD /* Application */,
+				4480DF652BA4761C005454FD /* Modules */,
+				4480DF632BA4760A005454FD /* Network */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -166,6 +181,67 @@
 				4480DF3F2BA4604D005454FD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4480DF632BA4760A005454FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF762BA47BEC005454FD /* NetworkRequestService.swift */,
+				4480DF742BA47B6A005454FD /* NetworkConfiguration.swift */,
+				4480DF672BA47630005454FD /* Protocols */,
+				4480DF662BA4762E005454FD /* Enums */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4480DF642BA47615005454FD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF312BA46048005454FD /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4480DF652BA4761C005454FD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF352BA46048005454FD /* HomeViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4480DF662BA4762E005454FD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF6C2BA4772A005454FD /* NetworkMethod.swift */,
+				4480DF6E2BA47750005454FD /* NetworkErrorType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		4480DF672BA47630005454FD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF682BA4764F005454FD /* NetworkRequestable.swift */,
+				4480DF6A2BA4770B005454FD /* NetworkEndpoint.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4480DF702BA47A22005454FD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF712BA47A29005454FD /* Environment */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4480DF712BA47A29005454FD /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF722BA47A33005454FD /* Environment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		8CD069DC86465B7CF9561C5E /* Frameworks */ = {
@@ -399,7 +475,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4480DF362BA46048005454FD /* HomeViewController.swift in Sources */,
+				4480DF692BA4764F005454FD /* NetworkRequestable.swift in Sources */,
 				4480DF322BA46048005454FD /* AppDelegate.swift in Sources */,
+				4480DF732BA47A33005454FD /* Environment.swift in Sources */,
+				4480DF6F2BA47750005454FD /* NetworkErrorType.swift in Sources */,
+				4480DF6B2BA4770B005454FD /* NetworkEndpoint.swift in Sources */,
+				4480DF6D2BA4772A005454FD /* NetworkMethod.swift in Sources */,
+				4480DF772BA47BEC005454FD /* NetworkRequestService.swift in Sources */,
+				4480DF752BA47B6A005454FD /* NetworkConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
