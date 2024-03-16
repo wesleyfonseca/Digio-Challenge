@@ -37,6 +37,7 @@
 		4480DF9A2BA5B8A0005454FD /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF992BA5B8A0005454FD /* HomeHeaderView.swift */; };
 		4480DF9D2BA5BA19005454FD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF9C2BA5BA19005454FD /* UIView+Extensions.swift */; };
 		4480DFA02BA5BB14005454FD /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF9F2BA5BB14005454FD /* ViewCodeProtocol.swift */; };
+		4480DFA32BA5CF7F005454FD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DFA22BA5CF7F005454FD /* HomeCell.swift */; };
 		91A5070848C0602A3915876D /* Pods_Digio_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA50B71217E956D66A535BB /* Pods_Digio_Challenge.framework */; };
 		B642F8D8EBD2EE4A3367D32C /* Pods_Digio_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9C4361D70EA6B9E8BA70D /* Pods_Digio_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		4480DF992BA5B8A0005454FD /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		4480DF9C2BA5BA19005454FD /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		4480DF9F2BA5BB14005454FD /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
+		4480DFA22BA5CF7F005454FD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_Challenge_Digio_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -356,7 +358,8 @@
 		4480DF982BA5B87F005454FD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4480DF992BA5B8A0005454FD /* HomeHeaderView.swift */,
+				4480DFA12BA5CF17005454FD /* Cells */,
+				4480DFA42BA5D217005454FD /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -375,6 +378,22 @@
 				4480DF9F2BA5BB14005454FD /* ViewCodeProtocol.swift */,
 			);
 			path = ViewCode;
+			sourceTree = "<group>";
+		};
+		4480DFA12BA5CF17005454FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4480DFA22BA5CF7F005454FD /* HomeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4480DFA42BA5D217005454FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4480DF992BA5B8A0005454FD /* HomeHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8CD069DC86465B7CF9561C5E /* Frameworks */ = {
@@ -621,6 +640,7 @@
 				4480DF972BA4CBA2005454FD /* NetworkImageLoader.swift in Sources */,
 				4480DF6F2BA47750005454FD /* NetworkErrorType.swift in Sources */,
 				4480DF9D2BA5BA19005454FD /* UIView+Extensions.swift in Sources */,
+				4480DFA32BA5CF7F005454FD /* HomeCell.swift in Sources */,
 				4480DF6B2BA4770B005454FD /* NetworkEndpoint.swift in Sources */,
 				4480DF942BA4C658005454FD /* HomeDTO.swift in Sources */,
 				4480DF6D2BA4772A005454FD /* NetworkMethod.swift in Sources */,

@@ -50,3 +50,9 @@ final class HomeViewModel: HomeViewModelInterface {
         }
     }
 }
+
+enum HomeSections: CaseIterable {
+    case spotlight
+    case cash
+    case products
+}
