@@ -1,6 +1,7 @@
 import Foundation
 
 protocol HomeViewModelInterface: AnyObject {
+    var headerViewConfiguration: HomeHeaderView.Configuration { get }
     var delegate: HomeViewModelDelegate? { get set }
     
     func fetchData()
@@ -14,6 +15,13 @@ protocol HomeViewModelDelegate: AnyObject {
 final class HomeViewModel: HomeViewModelInterface {
     
     // MARK: - Properties
+    var headerViewConfiguration: HomeHeaderView.Configuration {
+        return .init(
+            imageIcon: "ic_header",
+            name: "Maria"
+        )
+    }
+    
     private var data: HomeDTO?
     private let service: NetworkRequestable
     weak var delegate: HomeViewModelDelegate?

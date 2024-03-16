@@ -3,6 +3,11 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     // MARK: - Properties
+    private let headerView: HomeHeaderView = {
+        let view = HomeHeaderView()
+        return view
+    }()
+    
     private let router: HomeRouterInterface
     private let viewModel: HomeViewModelInterface
     
@@ -23,16 +28,33 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
+        setupView()
         viewModel.fetchData()
+    }
+}
+
+// MARK: - ViewCodeProtocol
+extension HomeViewController: ViewCodeProtocol {
+    func buildViewHierarchy() {
+        
+    }
+    
+    func setupConstraints() {
+        
+    }
+    
+    func setupAditionalConfiguration() {
+        view.backgroundColor = .white
+        navigationItem.titleView = headerView
     }
 }
 
 // MARK: - HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
     func fetchDataWithSuccess() {
-        print("SUCCESS")
+        DispatchQueue.main.async {
+            self.headerView.build(configuration: self.viewModel.headerViewConfiguration)
+        }
     }
     
     func fetchDataWithError(message: String) {
