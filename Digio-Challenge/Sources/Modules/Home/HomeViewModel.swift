@@ -1,6 +1,7 @@
 import Foundation
 
 protocol HomeViewModelInterface: AnyObject {
+    var numberOfRows: Int { get }
     var headerViewConfiguration: HomeHeaderView.Configuration { get }
     var delegate: HomeViewModelDelegate? { get set }
     
@@ -15,6 +16,12 @@ protocol HomeViewModelDelegate: AnyObject {
 final class HomeViewModel: HomeViewModelInterface {
     
     // MARK: - Properties
+    var numberOfRows: Int {
+        guard let data else { return 0 }
+        
+        return 0
+    }
+    
     var headerViewConfiguration: HomeHeaderView.Configuration {
         return .init(
             imageIcon: "ic_header",
@@ -49,10 +56,4 @@ final class HomeViewModel: HomeViewModelInterface {
             }
         }
     }
-}
-
-enum HomeSections: CaseIterable {
-    case spotlight
-    case cash
-    case products
 }

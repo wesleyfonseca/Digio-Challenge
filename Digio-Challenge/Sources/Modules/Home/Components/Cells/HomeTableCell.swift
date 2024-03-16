@@ -1,6 +1,6 @@
 import UIKit
 
-final class HomeCell: UITableViewCell {
+final class HomeTableCell: UITableViewCell {
     
     // MARK: - Properties
     private let stackView: UIStackView = {
@@ -10,6 +10,13 @@ final class HomeCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 8.0
         return stackView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        return label
     }()
     
     private lazy var collectionView: UICollectionView = {
@@ -22,11 +29,15 @@ final class HomeCell: UITableViewCell {
         )
         layout.itemSize = CGSize(width: cardWidth, height: cardHeight)
         layout.scrollDirection = .horizontal
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(
+            HomeCollectionCell.self,
+            forCellWithReuseIdentifier: String(describing: HomeCollectionCell.self)
+        )
         return collectionView
     }()
     
@@ -39,7 +50,7 @@ final class HomeCell: UITableViewCell {
     private var cardWidth: Double {
         guard let configuration else { return 0.0 }
         
-        switch configuration.type {
+        switch configuration.collectionConfiguration.type {
         case .spotlight:
             return (UIScreen.main.bounds.width * 0.95) - (Constants.insetsMargin * 2)
         case .cash:
@@ -52,7 +63,7 @@ final class HomeCell: UITableViewCell {
     private var cardHeight: Double {
         guard let configuration else { return 0.0 }
         
-        switch configuration.type {
+        switch configuration.collectionConfiguration.type {
         case .spotlight:
             return 200
         case .cash:
@@ -62,7 +73,7 @@ final class HomeCell: UITableViewCell {
         }
     }
     
-    private var configuration: HomeCell.Configuration?
+    private var configuration: HomeTableCell.Configuration?
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -77,46 +88,42 @@ final class HomeCell: UITableViewCell {
     // MARK: - Enums
     enum Constants {
         static let insetsMargin = 10.0
+        
+        
     }
 }
 
 // MARK: - ViewCodeProtocol
-extension HomeCell: ViewCodeProtocol {
+extension HomeTableCell: ViewCodeProtocol {
     func buildViewHierarchy() {
         contentView.addSubview(stackView)
     }
     
     func setupConstraints() {
-        stackView.pinToBounds(of: self)
+        stackView.pinToBounds(of: contentView)
     }
     
     func setupAditionalConfiguration() {
         backgroundColor = .clear
     }
-    
-    private func setupConstraintsWithTypeSelected() {
-        guard let configuration else { return }
-        
-        switch configuration.type {
-        case .spotlight:
-            return
-        case .cash:
-            return
-        case .products:
-            return
-        }
-    }
 }
 
 // MARK: - UICollectionViewDelegate & UICollectionViewDataSource
-extension HomeCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .blue
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomeCollectionCell.self), for: indexPath) as? HomeCollectionCell else {
+            return UICollectionViewCell()
+        }
+        
+        guard let configuration else {
+            return UICollectionViewCell()
+        }
+    
+        cell.build(configuration: configuration.collectionConfiguration)
         return cell
     }
     
@@ -127,45 +134,24 @@ extension HomeCell: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 // MARK: - Configuration
-extension HomeCell {
-    enum HomeCellType {
-        case spotlight
-        case cash
-        case products
-    }
-    
+extension HomeTableCell {
     struct Configuration {
-        let type: HomeCellType
-        let spotlightConfiguration: [Spotlight]?
-        let cashConfiguration: Cash?
-        let productsConfiguration: [Product]?
-        
-        init(
-            type: HomeCellType,
-            spotlightConfiguration: [Spotlight]? = nil,
-            cashConfiguration: Cash? = nil,
-            productsConfiguration: [Product]? = nil
-        ) {
-            self.type = type
-            self.spotlightConfiguration = spotlightConfiguration
-            self.cashConfiguration = cashConfiguration
-            self.productsConfiguration = productsConfiguration
-        }
+        let title: String?
+        let collectionConfiguration: HomeCollectionCell.Configuration
     }
     
     func build(configuration: Configuration) {
         self.configuration = configuration
         
-        switch configuration.type {
-        case .spotlight:
-            break
-        case .cash:
-            break
-        case .products:
-            break
+        if let title = configuration.title {
+            titleLabel.text = title
         }
         
+        stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(collectionView)
+        
         collectionView.heightAnchor.constraint(equalToConstant: cardHeight).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.insetsMargin).isActive = true
     }
 }

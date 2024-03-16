@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(HomeCell.self, forCellReuseIdentifier: String(describing: HomeCell.self))
+        tableView.register(HomeTableCell.self, forCellReuseIdentifier: String(describing: HomeTableCell.self))
         return tableView
     }()
     
@@ -67,11 +67,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeCell.self), for: indexPath) as? HomeCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableCell.self), for: indexPath) as? HomeTableCell else {
             return UITableViewCell()
         }
         
-        cell.build(configuration: .init(type: .spotlight))
+        cell.build(configuration: .init(
+            title: "boa",
+            collectionConfiguration: .init(type: .products))
+        )
         return cell
     }
     
