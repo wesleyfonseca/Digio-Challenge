@@ -100,6 +100,7 @@ extension HomeTableCell: ViewCodeProtocol {
     
     func setupAditionalConfiguration() {
         backgroundColor = .clear
+        selectionStyle = .none
     }
 }
 

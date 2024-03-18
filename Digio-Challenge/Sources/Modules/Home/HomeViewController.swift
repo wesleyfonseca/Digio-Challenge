@@ -78,10 +78,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.build(configuration: configuration)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 }
 
 // MARK: - HomeViewModelDelegate
@@ -94,6 +90,6 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func fetchDataWithError(message: String) {
-        print("Failure")
+        print("Failure to load")
     }
 }
