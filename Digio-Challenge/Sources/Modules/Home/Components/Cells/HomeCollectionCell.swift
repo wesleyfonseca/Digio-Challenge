@@ -21,8 +21,8 @@ final class HomeCollectionCell: UICollectionViewCell {
         return view
     }()
     
-    private let productsView: BannerImageView = {
-        let view = BannerImageView()
+    private let productsView: ProductImageView = {
+        let view = ProductImageView()
         return view
     }()
     
