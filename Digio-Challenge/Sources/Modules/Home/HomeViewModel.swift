@@ -6,6 +6,7 @@ protocol HomeViewModelInterface: AnyObject {
     var delegate: HomeViewModelDelegate? { get set }
     
     func fetchData()
+    func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration?
 }
 
 protocol HomeViewModelDelegate: AnyObject {
@@ -17,9 +18,7 @@ final class HomeViewModel: HomeViewModelInterface {
     
     // MARK: - Properties
     var numberOfRows: Int {
-        guard let data else { return 0 }
-        
-        return 0
+        return 3
     }
     
     var headerViewConfiguration: HomeHeaderView.Configuration {
@@ -27,6 +26,34 @@ final class HomeViewModel: HomeViewModelInterface {
             imageIcon: "ic_header",
             name: "Maria"
         )
+    }
+    
+    private var spotlightViewConfiguration: HomeTableCell.Configuration? {
+        guard let data else { return nil }
+        
+        return .init(collectionConfiguration: .init(
+            type: .spotlight,
+            spotlightConfiguration: data.spotlight))
+    }
+    
+    private var cashViewConfiguration: HomeTableCell.Configuration? {
+        guard let data else { return nil }
+        
+        return .init(
+            title: "digio Cash",
+            collectionConfiguration: .init(
+            type: .cash,
+            cashConfiguration: data.cash))
+    }
+    
+    private var productsViewConfiguration: HomeTableCell.Configuration? {
+        guard let data else { return nil }
+        
+        return .init(
+            title: "Produtos",
+            collectionConfiguration: .init(
+            type: .products,
+            productsConfiguration: data.products))
     }
     
     private var data: HomeDTO?
@@ -54,6 +81,19 @@ final class HomeViewModel: HomeViewModelInterface {
             case .failure(let error):
                 delegate?.fetchDataWithError(message: error.localizedDescription)
             }
+        }
+    }
+    
+    func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration? {
+        switch indexPath.row {
+        case 0:
+            return spotlightViewConfiguration
+        case 1:
+            return cashViewConfiguration
+        case 2:
+            return productsViewConfiguration
+        default:
+            return nil
         }
     }
 }

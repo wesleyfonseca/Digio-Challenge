@@ -63,7 +63,7 @@ extension HomeViewController: ViewCodeProtocol {
 // MARK: - UITableViewDelegate & UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,10 +71,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.build(configuration: .init(
-            title: "boa",
-            collectionConfiguration: .init(type: .products))
-        )
+        guard let configuration = viewModel.tableCellConfiguration(indexPath: indexPath) else {
+            return UITableViewCell()
+        }
+                
+        cell.build(configuration: configuration)
         return cell
     }
     

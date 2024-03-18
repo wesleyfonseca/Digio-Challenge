@@ -138,20 +138,30 @@ extension HomeTableCell {
     struct Configuration {
         let title: String?
         let collectionConfiguration: HomeCollectionCell.Configuration
+        
+        init(
+            title: String? = nil,
+            collectionConfiguration: HomeCollectionCell.Configuration
+        ) {
+            self.title = title
+            self.collectionConfiguration = collectionConfiguration
+        }
     }
     
     func build(configuration: Configuration) {
         self.configuration = configuration
-        
-        if let title = configuration.title {
-            titleLabel.text = title
-        }
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(collectionView)
         
         collectionView.heightAnchor.constraint(equalToConstant: cardHeight).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.insetsMargin).isActive = true
+        
+        if let title = configuration.title {
+            titleLabel.text = title
+            
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.insetsMargin).isActive = true
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24).isActive = true
+        }
     }
 }
