@@ -105,7 +105,7 @@ extension HomeCollectionCell {
                 return
             }
             
-            spotiLightView.build(configuration: .init(imageUrl: bannerUrl))
+            spotiLightView.build(configuration: .init(type: configuration.type, imageUrl: bannerUrl))
         case .cash:
             spotiLightView.isHidden = true
             cashView.isHidden = false
@@ -115,7 +115,7 @@ extension HomeCollectionCell {
                 return
             }
             
-            cashView.build(configuration: .init(imageUrl: bannerUrl))
+            cashView.build(configuration: .init(type: configuration.type, imageUrl: bannerUrl))
         case .products:
             spotiLightView.isHidden = true
             cashView.isHidden = true

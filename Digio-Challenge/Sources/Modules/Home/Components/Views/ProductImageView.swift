@@ -3,14 +3,11 @@ import UIKit
 final class ProductImageView: UIView {
     
     // MARK: - Properties
-    private lazy var container: UIView = {
+    private let container: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 16.0
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.5
-        view.layer.shadowOffset = CGSize(width: 1, height: 2)
-        view.layer.shadowRadius = 3
+        view.addShadow()
         return view
     }()
     
@@ -30,6 +27,12 @@ final class ProductImageView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Enums
+    private enum Constants {
+        static let spacing: CGFloat = 4.0
+        static let imageSize: CGFloat = 60.0
+    }
 }
 
 // MARK: - ViewCodeProtocol
@@ -43,10 +46,10 @@ extension ProductImageView: ViewCodeProtocol {
         container.pinToBounds(
             of: self,
             customSpacing: .init(
-                top: 4,
-                left: 4,
-                bottom: 4,
-                right: 4
+                top: Constants.spacing,
+                left: Constants.spacing,
+                bottom: Constants.spacing,
+                right: Constants.spacing
             )
         )
         
@@ -54,8 +57,8 @@ extension ProductImageView: ViewCodeProtocol {
         NSLayoutConstraint.activate([
             bannerImageView.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             bannerImageView.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            bannerImageView.heightAnchor.constraint(equalToConstant: 60),
-            bannerImageView.widthAnchor.constraint(equalToConstant: 60)
+            bannerImageView.heightAnchor.constraint(equalToConstant: Constants.imageSize),
+            bannerImageView.widthAnchor.constraint(equalToConstant: Constants.imageSize)
         ])
     }
     

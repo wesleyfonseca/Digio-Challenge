@@ -5,6 +5,13 @@ import UIKit
 final class BannerImageView: UIView {
     
     // MARK: - Properties
+    private lazy var container: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16.0
+        return view
+    }()
+    
     private let bannerImageView: NetworkImageLoader = {
         let imageView = NetworkImageLoader()
         imageView.contentMode = .scaleAspectFill
@@ -32,11 +39,12 @@ final class BannerImageView: UIView {
 // MARK: - ViewCodeProtocol
 extension BannerImageView: ViewCodeProtocol {
     func buildViewHierarchy() {
-        addSubview(bannerImageView)
+        addSubview(container)
+        container.addSubview(bannerImageView)
     }
     
     func setupConstraints() {
-        bannerImageView.pinToBounds(
+        container.pinToBounds(
             of: self,
             customSpacing: .init(
                 top: Constants.spacing,
@@ -45,7 +53,8 @@ extension BannerImageView: ViewCodeProtocol {
                 right: Constants.spacing
             )
         )
-
+        
+        bannerImageView.pinToBounds(of: container)
     }
     
     func setupAditionalConfiguration() {
@@ -56,10 +65,15 @@ extension BannerImageView: ViewCodeProtocol {
 // MARK: - Configuration
 extension BannerImageView {
     struct Configuration {
+        let type: HomeCollectionCell.HomeCollectionCellType
         let imageUrl: String
     }
     
     func build(configuration: Configuration) {
         bannerImageView.downloadImage(with: configuration.imageUrl)
+        
+        if configuration.type == .spotlight {
+            container.addShadow()
+        }
     }
 }
