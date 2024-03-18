@@ -76,6 +76,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
                 
         cell.build(configuration: configuration)
+        cell.delegate = self
         return cell
     }
 }
@@ -91,5 +92,23 @@ extension HomeViewController: HomeViewModelDelegate {
     
     func fetchDataWithError(message: String) {
         print("Failure to load")
+    }
+}
+
+// MARK: - HomeTableCellDelegate
+extension HomeViewController: HomeTableCellDelegate {
+    func cellTapped(
+        collectionConfiguration: HomeCollectionCell.Configuration,
+        index: Int
+    ) {
+        guard
+            let detailData = viewModel.detailData(
+                collectionConfiguration: collectionConfiguration,
+                index: index
+            )
+        else {
+            return
+        }
+        router.showDetail(data: detailData)
     }
 }

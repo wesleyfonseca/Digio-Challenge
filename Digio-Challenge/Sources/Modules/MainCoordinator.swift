@@ -7,6 +7,11 @@ final class MainCoordinator: NavigationCoordinator {
         return homeBuilder
     }()
     
+    private let detailBuilder: DetailBuilder = {
+        let detailBuilder = DetailBuilder()
+        return detailBuilder
+    }()
+    
     func start() {
         viewController.setViewControllers([homeBuilder.build()], animated: true)
     }
@@ -14,7 +19,7 @@ final class MainCoordinator: NavigationCoordinator {
 
 // MARK: - HomeRouterDelegate
 extension MainCoordinator: HomeRouterDelegate {
-    func navigateToDetail() {
+    func navigateToDetail(data: DetailDTO) {
         
     }
 }

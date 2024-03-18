@@ -7,6 +7,7 @@ protocol HomeViewModelInterface: AnyObject {
     
     func fetchData()
     func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration?
+    func detailData(collectionConfiguration: HomeCollectionCell.Configuration, index: Int) -> DetailDTO?
 }
 
 protocol HomeViewModelDelegate: AnyObject {
@@ -97,6 +98,40 @@ final class HomeViewModel: HomeViewModelInterface {
             return productsViewConfiguration
         default:
             return nil
+        }
+    }
+    
+    func detailData(collectionConfiguration: HomeCollectionCell.Configuration, index: Int) -> DetailDTO? {
+        guard let data else { return nil }
+        
+        switch collectionConfiguration.type {
+        case .spotlight:
+            let dataSpotlight = data.spotlight[index]
+            let detailData = DetailDTO(
+                title: "Spotlight",
+                name: dataSpotlight.name,
+                description: dataSpotlight.description,
+                imageUrl: dataSpotlight.bannerURL
+            )
+            return detailData
+        case .cash:
+            let dataSpotlight = data.cash
+            let detailData = DetailDTO(
+                title: "digio Cash",
+                name: dataSpotlight.title,
+                description: dataSpotlight.description,
+                imageUrl: dataSpotlight.bannerURL
+            )
+            return detailData
+        case .products:
+            let dataSpotlight = data.products[index]
+            let detailData = DetailDTO(
+                title: "Produtos",
+                name: dataSpotlight.name,
+                description: dataSpotlight.description,
+                imageUrl: dataSpotlight.imageURL
+            )
+            return detailData
         }
     }
 }

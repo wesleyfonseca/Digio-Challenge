@@ -1,11 +1,11 @@
 import Foundation
 
 protocol HomeRouterInterface: AnyObject {
-    func showDetail()
+    func showDetail(data: DetailDTO)
 }
 
 protocol HomeRouterDelegate: AnyObject {
-    func navigateToDetail()
+    func navigateToDetail(data: DetailDTO)
 }
 
 final class HomeRouter: HomeRouterInterface {
@@ -19,7 +19,7 @@ final class HomeRouter: HomeRouterInterface {
     }
     
     // MARK: - Methods
-    func showDetail() {
-        delegate?.navigateToDetail()
+    func showDetail(data: DetailDTO) {
+        delegate?.navigateToDetail(data: data)
     }
 }

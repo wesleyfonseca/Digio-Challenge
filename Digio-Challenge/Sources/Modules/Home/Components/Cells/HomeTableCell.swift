@@ -1,5 +1,12 @@
 import UIKit
 
+protocol HomeTableCellDelegate: AnyObject {
+    func cellTapped(
+        collectionConfiguration: HomeCollectionCell.Configuration,
+        index: Int
+    )
+}
+
 final class HomeTableCell: UITableViewCell {
     
     // MARK: - Properties
@@ -69,6 +76,7 @@ final class HomeTableCell: UITableViewCell {
     }
     
     private var configuration: HomeTableCell.Configuration?
+    weak var delegate: HomeTableCellDelegate?
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -83,8 +91,6 @@ final class HomeTableCell: UITableViewCell {
     // MARK: - Enums
     enum Constants {
         static let insetsMargin = 10.0
-        
-        
     }
 }
 
@@ -134,8 +140,12 @@ extension HomeTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        print("\(indexPath.item + 1)")
+        guard let configuration else { return }
+        
+        delegate?.cellTapped(
+            collectionConfiguration: configuration.collectionConfiguration,
+            index: indexPath.item
+        )
     }
 }
 
