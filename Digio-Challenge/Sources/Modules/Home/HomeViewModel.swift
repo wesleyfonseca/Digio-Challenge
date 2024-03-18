@@ -33,7 +33,8 @@ final class HomeViewModel: HomeViewModelInterface {
         
         return .init(collectionConfiguration: .init(
             type: .spotlight,
-            spotlightConfiguration: data.spotlight))
+            spotlightConfiguration: data.spotlight)
+        )
     }
     
     private var cashViewConfiguration: HomeTableCell.Configuration? {
@@ -43,7 +44,8 @@ final class HomeViewModel: HomeViewModelInterface {
             title: "digio Cash",
             collectionConfiguration: .init(
             type: .cash,
-            cashConfiguration: data.cash))
+            cashConfiguration: data.cash)
+        )
     }
     
     private var productsViewConfiguration: HomeTableCell.Configuration? {
@@ -53,7 +55,8 @@ final class HomeViewModel: HomeViewModelInterface {
             title: "Produtos",
             collectionConfiguration: .init(
             type: .products,
-            productsConfiguration: data.products))
+            productsConfiguration: data.products)
+        )
     }
     
     private var data: HomeDTO?

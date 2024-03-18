@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09FDB4C7A631B23127BC0283 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */; };
+		442728CE2BA867E3006B9424 /* SpotLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728CD2BA867E3006B9424 /* SpotLightView.swift */; };
 		4480DF322BA46048005454FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF312BA46048005454FD /* AppDelegate.swift */; };
 		4480DF362BA46048005454FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF352BA46048005454FD /* HomeViewController.swift */; };
 		4480DF3B2BA4604D005454FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4480DF3A2BA4604D005454FD /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		14B9C4361D70EA6B9E8BA70D /* Pods_Digio_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		442728CD2BA867E3006B9424 /* SpotLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLightView.swift; sourceTree = "<group>"; };
 		4480DF2E2BA46048005454FD /* Digio-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digio-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4480DF312BA46048005454FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4480DF352BA46048005454FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				4480DF992BA5B8A0005454FD /* HomeHeaderView.swift */,
+				442728CD2BA867E3006B9424 /* SpotLightView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				4480DF322BA46048005454FD /* AppDelegate.swift in Sources */,
 				4480DFA62BA5E5B2005454FD /* HomeCollectionCell.swift in Sources */,
 				4480DF8E2BA4BFFF005454FD /* HomeRouter.swift in Sources */,
+				442728CE2BA867E3006B9424 /* SpotLightView.swift in Sources */,
 				4480DF732BA47A33005454FD /* Environment.swift in Sources */,
 				4480DF912BA4C3F1005454FD /* HomeEndpoint.swift in Sources */,
 				4480DF972BA4CBA2005454FD /* NetworkImageLoader.swift in Sources */,

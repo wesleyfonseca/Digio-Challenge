@@ -11,9 +11,8 @@ final class HomeCollectionCell: UICollectionViewCell {
         return stackView
     }()
     
-    private let spotiLightView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .black
+    private let spotiLightView: SpotLightView = {
+        let view = SpotLightView()
         return view
     }()
     
@@ -95,7 +94,7 @@ extension HomeCollectionCell {
         }
     }
     
-    func build(configuration: Configuration) {
+    func build(configuration: Configuration, indexPath: IndexPath) {
         self.configuration = configuration
         
         switch configuration.type {
@@ -103,6 +102,12 @@ extension HomeCollectionCell {
             spotiLightView.isHidden = false
             cashView.isHidden = true
             productsView.isHidden = true
+            
+            guard let bannerUrl = configuration.spotlightConfiguration?[indexPath.item].bannerURL else {
+                return
+            }
+            
+            spotiLightView.build(configuration: .init(imageUrl: bannerUrl))
         case .cash:
             spotiLightView.isHidden = true
             cashView.isHidden = false

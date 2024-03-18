@@ -41,12 +41,6 @@ final class HomeTableCell: UITableViewCell {
         return collectionView
     }()
     
-    private let bannerImageView: NetworkImageLoader = {
-        let imageView = NetworkImageLoader()
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-    
     private var cardWidth: Double {
         guard let configuration else { return 0.0 }
         
@@ -69,7 +63,7 @@ final class HomeTableCell: UITableViewCell {
         case .cash:
             return 100
         case .products:
-            return 40
+            return 120
         }
     }
     
@@ -111,7 +105,17 @@ extension HomeTableCell: ViewCodeProtocol {
 // MARK: - UICollectionViewDelegate & UICollectionViewDataSource
 extension HomeTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        guard let configuration else { return 0 }
+        
+        if let config = configuration.collectionConfiguration.spotlightConfiguration {
+            return config.count
+        } else if let _ = configuration.collectionConfiguration.cashConfiguration {
+            return 1
+        } else if let config = configuration.collectionConfiguration.productsConfiguration {
+            return config.count
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -123,7 +127,7 @@ extension HomeTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     
-        cell.build(configuration: configuration.collectionConfiguration)
+        cell.build(configuration: configuration.collectionConfiguration, indexPath: indexPath)
         return cell
     }
     
