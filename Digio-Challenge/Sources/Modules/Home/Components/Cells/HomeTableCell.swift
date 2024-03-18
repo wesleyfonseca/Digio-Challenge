@@ -16,6 +16,7 @@ final class HomeTableCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.textColor = UIColor(red: 28/255, green: 43/255, blue: 64/255, alpha: 1)
         return label
     }()
     

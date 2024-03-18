@@ -7,10 +7,11 @@ final class NetworkImageLoader: UIImageView {
     private var imageUrlString: String?
     
     // MARK: - Methods
-    func downloadImage(with urlString: String) {
+    func downloadImage(with urlString: String, completion: ((NetworkErrorType) -> Void)? = nil ) {
         imageUrlString = urlString
         
         guard let url = URL(string: urlString) else {
+            completion?(.unknown)
             return
         }
         
@@ -24,6 +25,7 @@ final class NetworkImageLoader: UIImageView {
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             if let error {
                 print(error.localizedDescription)
+                completion?(.loadingImageError)
                 return
             }
             
@@ -37,6 +39,8 @@ final class NetworkImageLoader: UIImageView {
                     if self?.imageUrlString == urlString {
                         self?.image = image
                     }
+                } else {
+                    completion?(.loadingImageError)
                 }
             }
         }.resume()
