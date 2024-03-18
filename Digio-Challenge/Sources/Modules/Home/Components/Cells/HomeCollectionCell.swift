@@ -11,20 +11,18 @@ final class HomeCollectionCell: UICollectionViewCell {
         return stackView
     }()
     
-    private let spotiLightView: SpotLightView = {
-        let view = SpotLightView()
+    private let spotiLightView: BannerImageView = {
+        let view = BannerImageView()
         return view
     }()
     
-    private let cashView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
+    private let cashView: BannerImageView = {
+        let view = BannerImageView()
         return view
     }()
     
-    private let productsView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
+    private let productsView: BannerImageView = {
+        let view = BannerImageView()
         return view
     }()
     
@@ -112,10 +110,22 @@ extension HomeCollectionCell {
             spotiLightView.isHidden = true
             cashView.isHidden = false
             productsView.isHidden = true
+            
+            guard let bannerUrl = configuration.cashConfiguration?.bannerURL else {
+                return
+            }
+            
+            cashView.build(configuration: .init(imageUrl: bannerUrl))
         case .products:
             spotiLightView.isHidden = true
             cashView.isHidden = true
             productsView.isHidden = false
+            
+            guard let bannerUrl = configuration.productsConfiguration?[indexPath.item].imageURL else {
+                return
+            }
+            
+            productsView.build(configuration: .init(imageUrl: bannerUrl))
         }
     }
 }

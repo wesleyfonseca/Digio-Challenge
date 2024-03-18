@@ -2,7 +2,7 @@ import UIKit
 
 import UIKit
 
-final class SpotLightView: UIView {
+final class BannerImageView: UIView {
     
     // MARK: - Properties
     private let bannerImageView: NetworkImageLoader = {
@@ -30,7 +30,7 @@ final class SpotLightView: UIView {
 }
 
 // MARK: - ViewCodeProtocol
-extension SpotLightView: ViewCodeProtocol {
+extension BannerImageView: ViewCodeProtocol {
     func buildViewHierarchy() {
         addSubview(bannerImageView)
     }
@@ -45,6 +45,7 @@ extension SpotLightView: ViewCodeProtocol {
                 right: Constants.spacing
             )
         )
+
     }
     
     func setupAditionalConfiguration() {
@@ -53,7 +54,7 @@ extension SpotLightView: ViewCodeProtocol {
 }
 
 // MARK: - Configuration
-extension SpotLightView {
+extension BannerImageView {
     struct Configuration {
         let imageUrl: String
     }
