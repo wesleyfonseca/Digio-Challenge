@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09FDB4C7A631B23127BC0283 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */; };
+		44213BFB2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */; };
+		44213BFD2BA9299500E13A72 /* HomeRouterInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */; };
+		44213BFF2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */; };
 		442728CE2BA867E3006B9424 /* BannerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728CD2BA867E3006B9424 /* BannerImageView.swift */; };
 		442728D02BA876BF006B9424 /* ProductImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728CF2BA876BF006B9424 /* ProductImageView.swift */; };
 		442728D22BA8C1C0006B9424 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D12BA8C1C0006B9424 /* DetailBuilder.swift */; };
@@ -16,13 +18,13 @@
 		442728D92BA8C229006B9424 /* DetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D82BA8C229006B9424 /* DetailDTO.swift */; };
 		442728DC2BA913C5006B9424 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728DB2BA913C5006B9424 /* ProductDetailView.swift */; };
 		442728DE2BA918EE006B9424 /* BannerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728DD2BA918EE006B9424 /* BannerDetailView.swift */; };
+		442728E32BA91CBF006B9424 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728E22BA91CBF006B9424 /* HomeViewModelTests.swift */; };
+		442728E72BA91D42006B9424 /* NetworkRequestableSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728E62BA91D42006B9424 /* NetworkRequestableSpy.swift */; };
+		442728EB2BA92137006B9424 /* HomeViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728EA2BA92137006B9424 /* HomeViewModelDelegateSpy.swift */; };
 		4480DF322BA46048005454FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF312BA46048005454FD /* AppDelegate.swift */; };
 		4480DF362BA46048005454FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF352BA46048005454FD /* HomeViewController.swift */; };
 		4480DF3B2BA4604D005454FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4480DF3A2BA4604D005454FD /* Assets.xcassets */; };
 		4480DF3E2BA4604D005454FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4480DF3C2BA4604D005454FD /* LaunchScreen.storyboard */; };
-		4480DF492BA4604E005454FD /* Digio_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF482BA4604E005454FD /* Digio_ChallengeTests.swift */; };
-		4480DF532BA4604E005454FD /* Digio_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF522BA4604E005454FD /* Digio_ChallengeUITests.swift */; };
-		4480DF552BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF542BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift */; };
 		4480DF692BA4764F005454FD /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF682BA4764F005454FD /* NetworkRequestable.swift */; };
 		4480DF6B2BA4770B005454FD /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF6A2BA4770B005454FD /* NetworkEndpoint.swift */; };
 		4480DF6D2BA4772A005454FD /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF6C2BA4772A005454FD /* NetworkMethod.swift */; };
@@ -59,17 +61,13 @@
 			remoteGlobalIDString = 4480DF2D2BA46048005454FD;
 			remoteInfo = "Digio-Challenge";
 		};
-		4480DF4F2BA4604E005454FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4480DF262BA46048005454FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4480DF2D2BA46048005454FD;
-			remoteInfo = "Digio-Challenge";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14B9C4361D70EA6B9E8BA70D /* Pods_Digio_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshot.swift; sourceTree = "<group>"; };
+		44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterInterfaceSpy.swift; sourceTree = "<group>"; };
+		44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelInterfaceSpy.swift; sourceTree = "<group>"; };
 		442728CD2BA867E3006B9424 /* BannerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImageView.swift; sourceTree = "<group>"; };
 		442728CF2BA876BF006B9424 /* ProductImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageView.swift; sourceTree = "<group>"; };
 		442728D12BA8C1C0006B9424 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
@@ -78,6 +76,9 @@
 		442728D82BA8C229006B9424 /* DetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDTO.swift; sourceTree = "<group>"; };
 		442728DB2BA913C5006B9424 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		442728DD2BA918EE006B9424 /* BannerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDetailView.swift; sourceTree = "<group>"; };
+		442728E22BA91CBF006B9424 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		442728E62BA91D42006B9424 /* NetworkRequestableSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestableSpy.swift; sourceTree = "<group>"; };
+		442728EA2BA92137006B9424 /* HomeViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		4480DF2E2BA46048005454FD /* Digio-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digio-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4480DF312BA46048005454FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4480DF352BA46048005454FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +86,6 @@
 		4480DF3D2BA4604D005454FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4480DF3F2BA4604D005454FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4480DF442BA4604E005454FD /* Digio-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digio-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4480DF482BA4604E005454FD /* Digio_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_ChallengeTests.swift; sourceTree = "<group>"; };
-		4480DF4E2BA4604E005454FD /* Digio-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digio-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4480DF522BA4604E005454FD /* Digio_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_ChallengeUITests.swift; sourceTree = "<group>"; };
-		4480DF542BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4480DF682BA4764F005454FD /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		4480DF6A2BA4770B005454FD /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
 		4480DF6C2BA4772A005454FD /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
@@ -140,14 +137,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4480DF4B2BA4604E005454FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09FDB4C7A631B23127BC0283 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -181,12 +170,55 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		442728DF2BA91CA1006B9424 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				442728E02BA91CA7006B9424 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		442728E02BA91CA7006B9424 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				442728E12BA91CAC006B9424 /* Doubles */,
+				442728E22BA91CBF006B9424 /* HomeViewModelTests.swift */,
+				44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		442728E12BA91CAC006B9424 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				442728EA2BA92137006B9424 /* HomeViewModelDelegateSpy.swift */,
+				44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */,
+				44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		442728E42BA91D33006B9424 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				442728E52BA91D37006B9424 /* Doubles */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		442728E52BA91D37006B9424 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				442728E62BA91D42006B9424 /* NetworkRequestableSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		4480DF252BA46048005454FD = {
 			isa = PBXGroup;
 			children = (
 				4480DF302BA46048005454FD /* Digio-Challenge */,
 				4480DF472BA4604E005454FD /* Digio-ChallengeTests */,
-				4480DF512BA4604E005454FD /* Digio-ChallengeUITests */,
 				4480DF2F2BA46048005454FD /* Products */,
 				1E5CE734A054A94C3767F5F9 /* Pods */,
 				8CD069DC86465B7CF9561C5E /* Frameworks */,
@@ -198,7 +230,6 @@
 			children = (
 				4480DF2E2BA46048005454FD /* Digio-Challenge.app */,
 				4480DF442BA4604E005454FD /* Digio-ChallengeTests.xctest */,
-				4480DF4E2BA4604E005454FD /* Digio-ChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,18 +246,10 @@
 		4480DF472BA4604E005454FD /* Digio-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				4480DF482BA4604E005454FD /* Digio_ChallengeTests.swift */,
+				442728E42BA91D33006B9424 /* Network */,
+				442728DF2BA91CA1006B9424 /* Modules */,
 			);
 			path = "Digio-ChallengeTests";
-			sourceTree = "<group>";
-		};
-		4480DF512BA4604E005454FD /* Digio-ChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4480DF522BA4604E005454FD /* Digio_ChallengeUITests.swift */,
-				4480DF542BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift */,
-			);
-			path = "Digio-ChallengeUITests";
 			sourceTree = "<group>";
 		};
 		4480DF612BA462A5005454FD /* Sources */ = {
@@ -490,25 +513,6 @@
 			productReference = 4480DF442BA4604E005454FD /* Digio-ChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4480DF4D2BA4604E005454FD /* Digio-ChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4480DF5E2BA4604E005454FD /* Build configuration list for PBXNativeTarget "Digio-ChallengeUITests" */;
-			buildPhases = (
-				00A2A295D77C4697669BCC8E /* [CP] Check Pods Manifest.lock */,
-				4480DF4A2BA4604E005454FD /* Sources */,
-				4480DF4B2BA4604E005454FD /* Frameworks */,
-				4480DF4C2BA4604E005454FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4480DF502BA4604E005454FD /* PBXTargetDependency */,
-			);
-			name = "Digio-ChallengeUITests";
-			productName = "Digio-ChallengeUITests";
-			productReference = 4480DF4E2BA4604E005454FD /* Digio-ChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -523,10 +527,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					4480DF432BA4604E005454FD = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 4480DF2D2BA46048005454FD;
-					};
-					4480DF4D2BA4604E005454FD = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 4480DF2D2BA46048005454FD;
 					};
@@ -547,7 +547,6 @@
 			targets = (
 				4480DF2D2BA46048005454FD /* Digio-Challenge */,
 				4480DF432BA4604E005454FD /* Digio-ChallengeTests */,
-				4480DF4D2BA4604E005454FD /* Digio-ChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -563,13 +562,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4480DF422BA4604E005454FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4480DF4C2BA4604E005454FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -595,28 +587,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Digio-ChallengeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		00A2A295D77C4697669BCC8E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Digio-Challenge-Digio-ChallengeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -710,16 +680,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4480DF492BA4604E005454FD /* Digio_ChallengeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4480DF4A2BA4604E005454FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4480DF532BA4604E005454FD /* Digio_ChallengeUITests.swift in Sources */,
-				4480DF552BA4604E005454FD /* Digio_ChallengeUITestsLaunchTests.swift in Sources */,
+				442728E72BA91D42006B9424 /* NetworkRequestableSpy.swift in Sources */,
+				442728EB2BA92137006B9424 /* HomeViewModelDelegateSpy.swift in Sources */,
+				44213BFD2BA9299500E13A72 /* HomeRouterInterfaceSpy.swift in Sources */,
+				44213BFB2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift in Sources */,
+				44213BFF2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift in Sources */,
+				442728E32BA91CBF006B9424 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,11 +696,6 @@
 			isa = PBXTargetDependency;
 			target = 4480DF2D2BA46048005454FD /* Digio-Challenge */;
 			targetProxy = 4480DF452BA4604E005454FD /* PBXContainerItemProxy */;
-		};
-		4480DF502BA4604E005454FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4480DF2D2BA46048005454FD /* Digio-Challenge */;
-			targetProxy = 4480DF4F2BA4604E005454FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -964,46 +925,6 @@
 			};
 			name = Release;
 		};
-		4480DF5F2BA4604E005454FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EECB6EB106F59081B25754C /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3J3DPX6MMA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wesleyfonseca.com.Digio-ChallengeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Digio-Challenge";
-			};
-			name = Debug;
-		};
-		4480DF602BA4604E005454FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3J3DPX6MMA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wesleyfonseca.com.Digio-ChallengeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Digio-Challenge";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1030,15 +951,6 @@
 			buildConfigurations = (
 				4480DF5C2BA4604E005454FD /* Debug */,
 				4480DF5D2BA4604E005454FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4480DF5E2BA4604E005454FD /* Build configuration list for PBXNativeTarget "Digio-ChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4480DF5F2BA4604E005454FD /* Debug */,
-				4480DF602BA4604E005454FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
