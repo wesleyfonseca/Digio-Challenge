@@ -32,3 +32,8 @@ SnapshotTesting is a Swift library facilitating snapshot testing, verifying UI o
 * At the project directory run: ```pod install```.
 * Build the project for testing using: ```Cmd```+ ```Shift```+ ```U```.
 * Run the tests using: ```Cmd``` + ```U```
+
+
+## App
+#### Home
+<img src="https://github.com/wesleyfonseca/Digio-Challenge/assets/47370603/dad14478-30bd-45bf-a3d3-fec38c72f789" width="200">
