@@ -57,6 +57,8 @@ extension HomeViewController: ViewCodeProtocol {
     func setupAditionalConfiguration() {
         view.backgroundColor = .white
         navigationItem.titleView = headerView
+        navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .gray
     }
 }
 

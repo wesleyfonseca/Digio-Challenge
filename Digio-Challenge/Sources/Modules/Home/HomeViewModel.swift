@@ -126,7 +126,7 @@ final class HomeViewModel: HomeViewModelInterface {
         case .products:
             let dataSpotlight = data.products[index]
             let detailData = DetailDTO(
-                title: "Produtos",
+                title: "Produto",
                 name: dataSpotlight.name,
                 description: dataSpotlight.description,
                 imageUrl: dataSpotlight.imageURL

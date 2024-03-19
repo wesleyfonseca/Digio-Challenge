@@ -20,6 +20,7 @@ final class MainCoordinator: NavigationCoordinator {
 // MARK: - HomeRouterDelegate
 extension MainCoordinator: HomeRouterDelegate {
     func navigateToDetail(data: DetailDTO) {
-        
+        let detailViewController = detailBuilder.build(detailData: data)
+        viewController.pushViewController(detailViewController, animated: true)
     }
 }

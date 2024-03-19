@@ -14,6 +14,7 @@
 		442728D42BA8C1D2006B9424 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D32BA8C1D2006B9424 /* DetailViewModel.swift */; };
 		442728D62BA8C1F2006B9424 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D52BA8C1F2006B9424 /* DetailRouter.swift */; };
 		442728D92BA8C229006B9424 /* DetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D82BA8C229006B9424 /* DetailDTO.swift */; };
+		442728DC2BA913C5006B9424 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728DB2BA913C5006B9424 /* ProductDetailView.swift */; };
 		4480DF322BA46048005454FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF312BA46048005454FD /* AppDelegate.swift */; };
 		4480DF362BA46048005454FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480DF352BA46048005454FD /* HomeViewController.swift */; };
 		4480DF3B2BA4604D005454FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4480DF3A2BA4604D005454FD /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		442728D32BA8C1D2006B9424 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		442728D52BA8C1F2006B9424 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		442728D82BA8C229006B9424 /* DetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDTO.swift; sourceTree = "<group>"; };
+		442728DB2BA913C5006B9424 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		4480DF2E2BA46048005454FD /* Digio-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digio-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4480DF312BA46048005454FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4480DF352BA46048005454FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,14 @@
 				442728D82BA8C229006B9424 /* DetailDTO.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		442728DA2BA91363006B9424 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				442728DB2BA913C5006B9424 /* ProductDetailView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4480DF252BA46048005454FD = {
@@ -348,6 +358,7 @@
 		4480DF842BA490DB005454FD /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				442728DA2BA91363006B9424 /* Components */,
 				442728D72BA8C21D006B9424 /* Model */,
 				4480DF872BA4910F005454FD /* DetailViewController.swift */,
 				442728D12BA8C1C0006B9424 /* DetailBuilder.swift */,
@@ -687,6 +698,7 @@
 				4480DF772BA47BEC005454FD /* NetworkRequestService.swift in Sources */,
 				4480DF752BA47B6A005454FD /* NetworkConfiguration.swift in Sources */,
 				4480DFA02BA5BB14005454FD /* ViewCodeProtocol.swift in Sources */,
+				442728DC2BA913C5006B9424 /* ProductDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
