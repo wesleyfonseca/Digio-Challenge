@@ -51,6 +51,7 @@ extension HomeHeaderView: ViewCodeProtocol {
         ])
         
         widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func setupAditionalConfiguration() {
