@@ -44,8 +44,8 @@ final class HomeViewModel: HomeViewModelInterface {
         return .init(
             title: "digio Cash",
             collectionConfiguration: .init(
-            type: .cash,
-            cashConfiguration: data.cash)
+                type: .cash,
+                cashConfiguration: data.cash)
         )
     }
     
@@ -55,8 +55,8 @@ final class HomeViewModel: HomeViewModelInterface {
         return .init(
             title: "Produtos",
             collectionConfiguration: .init(
-            type: .products,
-            productsConfiguration: data.products)
+                type: .products,
+                productsConfiguration: data.products)
         )
     }
     

@@ -76,7 +76,7 @@ extension Snapshotting where Value == CGPath, Format == String {
       .addLineToPoint: "LineTo",
       .addQuadCurveToPoint: "QuadCurveTo",
       .addCurveToPoint: "CurveTo",
-      .closeSubpath: "Close",
+      .closeSubpath: "Close"
     ]
 
     let numberOfPointsByType: [CGPathElementType: Int] = [
@@ -84,7 +84,7 @@ extension Snapshotting where Value == CGPath, Format == String {
       .addLineToPoint: 1,
       .addQuadCurveToPoint: 2,
       .addCurveToPoint: 3,
-      .closeSubpath: 0,
+      .closeSubpath: 0
     ]
 
     return SimplySnapshotting.lines.pullback { path in

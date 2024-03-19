@@ -1,7 +1,5 @@
 import UIKit
 
-import UIKit
-
 final class BannerImageView: UIView {
     
     // MARK: - Properties

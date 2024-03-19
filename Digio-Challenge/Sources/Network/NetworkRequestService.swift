@@ -9,7 +9,7 @@ final class NetworkRequestService: NetworkRequestable {
     func request<DataType>(
         endpoint: NetworkEndpoint,
         completion: @escaping (Result<DataType?, NetworkErrorType>) -> Void
-    ) where DataType : Decodable, DataType : Encodable {
+    ) where DataType: Decodable, DataType: Encodable {
         guard let request = endpoint.createRequest() else {
             completion(.failure(.unknown))
             return

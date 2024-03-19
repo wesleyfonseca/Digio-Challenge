@@ -30,12 +30,11 @@ extension String {
       try? NSRegularExpression(pattern: #"\r"#, options: .ignoreMetacharacters),
       try? NSRegularExpression(pattern: #"\""#, options: .ignoreMetacharacters),
       try? NSRegularExpression(pattern: #"\'"#, options: .ignoreMetacharacters),
-      try? NSRegularExpression(pattern: multilineLiteralAndNumberSign, options: .ignoreMetacharacters),
+      try? NSRegularExpression(pattern: multilineLiteralAndNumberSign, options: .ignoreMetacharacters)
     ]
     let matches = patterns.compactMap { $0?.firstMatch(in: self, options: .init(), range: NSRange.init(location: 0, length: self.count)) }
     return matches.count > 0
   }
-
 
   /// This method calculates how many number signs (#) we need to add around a string
   /// literal to properly escape its content.

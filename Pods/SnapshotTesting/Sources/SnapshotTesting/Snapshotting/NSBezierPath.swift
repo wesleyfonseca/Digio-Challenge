@@ -42,14 +42,14 @@ extension Snapshotting where Value == NSBezierPath, Format == String {
       .moveTo: "MoveTo",
       .lineTo: "LineTo",
       .curveTo: "CurveTo",
-      .closePath: "Close",
+      .closePath: "Close"
     ]
 
     let numberOfPointsByType: [NSBezierPath.ElementType: Int] = [
       .moveTo: 1,
       .lineTo: 1,
       .curveTo: 3,
-      .closePath: 0,
+      .closePath: 0
     ]
 
     return SimplySnapshotting.lines.pullback { path in
@@ -90,4 +90,3 @@ private let defaultNumberFormatter: NumberFormatter = {
   return numberFormatter
 }()
 #endif
-

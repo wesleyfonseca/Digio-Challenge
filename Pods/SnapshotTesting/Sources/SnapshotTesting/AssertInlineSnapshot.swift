@@ -213,7 +213,7 @@ internal func writeInlineSnapshot(
     let indentText = indentation(of: functionCallLine)
     sourceCodeLines.insert(contentsOf: [
       functionCallLine + multiLineStringLiteralTerminator,
-      indentText + multiLineStringLiteralTerminator + ")",
+      indentText + multiLineStringLiteralTerminator + ")"
       ] as [String.SubSequence], at: functionLineIndex)
     lineCountDifference += 1
   }

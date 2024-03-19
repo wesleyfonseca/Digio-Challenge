@@ -14,8 +14,4 @@ target 'Digio-Challenge' do
     pod 'SnapshotTesting'
   end
 
-  target 'Digio-ChallengeUITests' do
-    # Pods for testing
-  end
-
 end

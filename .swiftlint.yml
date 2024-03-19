@@ -1,0 +1,38 @@
+# ------------------------------------------------------------------------------
+# INCLUDE, EXCLUDE & IGNORED PATHS
+# ------------------------------------------------------------------------------
+
+# paths to ignore during linting.
+excluded:
+  - Pods
+
+# rule identifiers to exclude from running
+disabled_rules:
+  - trailing_whitespace
+  - unused_optional_binding
+
+# ------------------------------------------------------------------------------
+# LENGHT RULES
+# ------------------------------------------------------------------------------
+
+# file
+file_length:
+  warning: 1500 # lenght considered warning
+  error: 1700
+# type body
+type_body_length:
+  - 400 # lenght considered warning
+
+# code line
+line_length: 500
+
+#function_parameter_count
+function_parameter_count:
+  warning: 15
+  error: 20
+
+# ------------------------------------------------------------------------------
+# REPORTER TYPE (xcode)
+# ------------------------------------------------------------------------------
+
+reporter: "xcode"

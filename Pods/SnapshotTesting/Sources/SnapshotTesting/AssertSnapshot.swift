@@ -3,7 +3,7 @@ import XCTest
 /// Enhances failure messages with a command line diff tool expression that can be copied and pasted into a terminal.
 ///
 ///     diffTool = "ksdiff"
-public var diffTool: String? = nil
+public var diffTool: String?
 
 /// Whether or not to record all new references.
 public var isRecording = false
@@ -232,7 +232,7 @@ public func verifySnapshot<Value, Format>(
       guard var diffable = optionalDiffable else {
         return "Couldn't snapshot value"
       }
-      
+
       guard !recording, fileManager.fileExists(atPath: snapshotFileUrl.path) else {
         try snapshotting.diffing.toData(diffable).write(to: snapshotFileUrl)
         return recording

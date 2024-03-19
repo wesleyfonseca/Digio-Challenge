@@ -134,7 +134,7 @@ extension HomeTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let configuration else {
             return UICollectionViewCell()
         }
-    
+        
         cell.build(configuration: configuration.collectionConfiguration, indexPath: indexPath)
         return cell
     }

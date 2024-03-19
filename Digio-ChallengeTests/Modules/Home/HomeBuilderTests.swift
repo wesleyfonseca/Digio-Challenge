@@ -4,7 +4,7 @@ import XCTest
 @testable import Digio_Challenge
 
 final class HomeBuilderTests: XCTestCase {
- 
+    
     private let delegateSpy = HomeRouterDelegateSpy()
     
     private lazy var sut: HomeBuilder = {

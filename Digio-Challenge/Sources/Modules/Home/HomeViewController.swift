@@ -1,7 +1,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-
+    
     // MARK: - Properties
     private let headerView: HomeHeaderView = {
         let view = HomeHeaderView()
@@ -76,7 +76,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let configuration = viewModel.tableCellConfiguration(indexPath: indexPath) else {
             return UITableViewCell()
         }
-                
+        
         cell.build(configuration: configuration)
         cell.delegate = self
         return cell

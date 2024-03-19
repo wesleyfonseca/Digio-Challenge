@@ -13,8 +13,7 @@ extension DecodingError {
 let kCFBooleanTrue = NSNumber(booleanLiteral: true)
 let kCFBooleanFalse = NSNumber(booleanLiteral: false)
 
-
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 //
 // This source file is part of the Swift.org open source project
 //
@@ -24,11 +23,11 @@ let kCFBooleanFalse = NSNumber(booleanLiteral: false)
 // See https://swift.org/LICENSE.txt for license information
 // See https://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 //
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 // Plist Encoder
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 
 /// `PropertyListEncoder` facilitates the encoding of `Encodable` values into property lists.
 open class PropertyListEncoder {
@@ -39,12 +38,12 @@ open class PropertyListEncoder {
     open var outputFormat: PropertyListSerialization.PropertyListFormat = .binary
 
     /// Contextual user-provided information for use during encoding.
-    open var userInfo: [CodingUserInfoKey : Any] = [:]
+    open var userInfo: [CodingUserInfoKey: Any] = [:]
 
     /// Options set on the top-level encoder to pass down the encoding hierarchy.
     fileprivate struct _Options {
         let outputFormat: PropertyListSerialization.PropertyListFormat
-        let userInfo: [CodingUserInfoKey : Any]
+        let userInfo: [CodingUserInfoKey: Any]
     }
 
     /// The options set on the top-level encoder.
@@ -65,7 +64,7 @@ open class PropertyListEncoder {
     /// - returns: A new `Data` value containing the encoded property list data.
     /// - throws: `EncodingError.invalidValue` if a non-conforming floating-point value is encountered during encoding, and the encoding strategy is `.throw`.
     /// - throws: An error if any value throws an error during encoding.
-    open func encode<Value : Encodable>(_ value: Value) throws -> Data {
+    open func encode<Value: Encodable>(_ value: Value) throws -> Data {
         let topLevel = try encodeToTopLevelContainer(value)
         if topLevel is NSNumber {
             throw EncodingError.invalidValue(value,
@@ -95,7 +94,7 @@ open class PropertyListEncoder {
     /// - returns: A new top-level array or dictionary representing the value.
     /// - throws: `EncodingError.invalidValue` if a non-conforming floating-point value is encountered during encoding, and the encoding strategy is `.throw`.
     /// - throws: An error if any value throws an error during encoding.
-    internal func encodeToTopLevelContainer<Value : Encodable>(_ value: Value) throws -> Any {
+    internal func encodeToTopLevelContainer<Value: Encodable>(_ value: Value) throws -> Any {
         let encoder = _PlistEncoder(options: self.options)
         guard let topLevel = try encoder.box_(value) else {
             throw EncodingError.invalidValue(value,
@@ -109,7 +108,7 @@ open class PropertyListEncoder {
 
 // MARK: - _PlistEncoder
 
-fileprivate class _PlistEncoder : Encoder {
+private class _PlistEncoder: Encoder {
     // MARK: Properties
 
     /// The encoder's storage.
@@ -122,7 +121,7 @@ fileprivate class _PlistEncoder : Encoder {
     fileprivate(set) public var codingPath: [CodingKey]
 
     /// Contextual user-provided information for use during encoding.
-    public var userInfo: [CodingUserInfoKey : Any] {
+    public var userInfo: [CodingUserInfoKey: Any] {
         return self.options.userInfo
     }
 
@@ -191,7 +190,7 @@ fileprivate class _PlistEncoder : Encoder {
 
 // MARK: - Encoding Storage and Containers
 
-fileprivate struct _PlistEncodingStorage {
+private struct _PlistEncodingStorage {
     // MARK: Properties
 
     /// The container stack.
@@ -233,7 +232,7 @@ fileprivate struct _PlistEncodingStorage {
 
 // MARK: - Encoding Containers
 
-fileprivate struct _PlistKeyedEncodingContainer<K : CodingKey> : KeyedEncodingContainerProtocol {
+private struct _PlistKeyedEncodingContainer<K: CodingKey>: KeyedEncodingContainerProtocol {
     typealias Key = K
 
     // MARK: Properties
@@ -274,7 +273,7 @@ fileprivate struct _PlistKeyedEncodingContainer<K : CodingKey> : KeyedEncodingCo
     public mutating func encode(_ value: Float, forKey key: Key)  throws { self.container[key.stringValue] = self.encoder.box(value) }
     public mutating func encode(_ value: Double, forKey key: Key) throws { self.container[key.stringValue] = self.encoder.box(value) }
 
-    public mutating func encode<T : Encodable>(_ value: T, forKey key: Key) throws {
+    public mutating func encode<T: Encodable>(_ value: T, forKey key: Key) throws {
         self.encoder.codingPath.append(key)
         defer { self.encoder.codingPath.removeLast() }
         self.container[key.stringValue] = try self.encoder.box(value)
@@ -309,7 +308,7 @@ fileprivate struct _PlistKeyedEncodingContainer<K : CodingKey> : KeyedEncodingCo
     }
 }
 
-fileprivate struct _PlistUnkeyedEncodingContainer : UnkeyedEncodingContainer {
+private struct _PlistUnkeyedEncodingContainer: UnkeyedEncodingContainer {
     // MARK: Properties
 
     /// A reference to the encoder we're writing to.
@@ -353,7 +352,7 @@ fileprivate struct _PlistUnkeyedEncodingContainer : UnkeyedEncodingContainer {
     public mutating func encode(_ value: Double) throws { self.container.add(self.encoder.box(value)) }
     public mutating func encode(_ value: String) throws { self.container.add(self.encoder.box(value)) }
 
-    public mutating func encode<T : Encodable>(_ value: T) throws {
+    public mutating func encode<T: Encodable>(_ value: T) throws {
         self.encoder.codingPath.append(_PlistKey(index: self.count))
         defer { self.encoder.codingPath.removeLast() }
         self.container.add(try self.encoder.box(value))
@@ -384,7 +383,7 @@ fileprivate struct _PlistUnkeyedEncodingContainer : UnkeyedEncodingContainer {
     }
 }
 
-extension _PlistEncoder : SingleValueEncodingContainer {
+extension _PlistEncoder: SingleValueEncodingContainer {
     // MARK: - SingleValueEncodingContainer Methods
 
     private func assertCanEncodeNewValue() {
@@ -466,7 +465,7 @@ extension _PlistEncoder : SingleValueEncodingContainer {
         self.storage.push(container: self.box(value))
     }
 
-    public func encode<T : Encodable>(_ value: T) throws {
+    public func encode<T: Encodable>(_ value: T) throws {
         assertCanEncodeNewValue()
         try self.storage.push(container: self.box(value))
     }
@@ -477,26 +476,26 @@ extension _PlistEncoder : SingleValueEncodingContainer {
 extension _PlistEncoder {
 
     /// Returns the given value boxed in a container appropriate for pushing onto the container stack.
-    fileprivate func box(_ value: Bool)   -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Int)    -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Int8)   -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Int16)  -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Int32)  -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Int64)  -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: UInt)   -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: UInt8)  -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Bool) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Int) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Int8) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Int16) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Int32) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Int64) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: UInt) -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: UInt8) -> NSObject { return NSNumber(value: value) }
     fileprivate func box(_ value: UInt16) -> NSObject { return NSNumber(value: value) }
     fileprivate func box(_ value: UInt32) -> NSObject { return NSNumber(value: value) }
     fileprivate func box(_ value: UInt64) -> NSObject { return NSNumber(value: value) }
-    fileprivate func box(_ value: Float)  -> NSObject { return NSNumber(value: value) }
+    fileprivate func box(_ value: Float) -> NSObject { return NSNumber(value: value) }
     fileprivate func box(_ value: Double) -> NSObject { return NSNumber(value: value) }
     fileprivate func box(_ value: String) -> NSObject { return NSString(string: value) }
 
-    fileprivate func box<T : Encodable>(_ value: T) throws -> NSObject {
+    fileprivate func box<T: Encodable>(_ value: T) throws -> NSObject {
         return try self.box_(value) ?? NSDictionary()
     }
 
-    fileprivate func box_<T : Encodable>(_ value: T) throws -> NSObject? {
+    fileprivate func box_<T: Encodable>(_ value: T) throws -> NSObject? {
         if T.self == Date.self || T.self == NSDate.self {
             // PropertyListSerialization handles NSDate directly.
             return (value as! NSDate)
@@ -512,7 +511,7 @@ extension _PlistEncoder {
         } catch let error {
             // If the value pushed a container before throwing, pop it back off to restore state.
             if self.storage.count > depth {
-                let _ = self.storage.popContainer()
+                _ = self.storage.popContainer()
             }
 
             throw error
@@ -531,7 +530,7 @@ extension _PlistEncoder {
 
 /// _PlistReferencingEncoder is a special subclass of _PlistEncoder which has its own storage, but references the contents of a different encoder.
 /// It's used in superEncoder(), which returns a new encoder for encoding a superclass -- the lifetime of the encoder should not escape the scope it's created in, but it doesn't necessarily know when it's done being used (to write to the original container).
-fileprivate class _PlistReferencingEncoder : _PlistEncoder {
+private class _PlistReferencingEncoder: _PlistEncoder {
     // MARK: Reference types.
 
     /// The type of container we're referencing.
@@ -601,20 +600,20 @@ fileprivate class _PlistReferencingEncoder : _PlistEncoder {
     }
 }
 
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 // Plist Decoder
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 
 /// `PropertyListDecoder` facilitates the decoding of property list values into semantic `Decodable` types.
 open class PropertyListDecoder {
     // MARK: Options
 
     /// Contextual user-provided information for use during decoding.
-    open var userInfo: [CodingUserInfoKey : Any] = [:]
+    open var userInfo: [CodingUserInfoKey: Any] = [:]
 
     /// Options set on the top-level encoder to pass down the decoding hierarchy.
     fileprivate struct _Options {
-        let userInfo: [CodingUserInfoKey : Any]
+        let userInfo: [CodingUserInfoKey: Any]
     }
 
     /// The options set on the top-level decoder.
@@ -636,7 +635,7 @@ open class PropertyListDecoder {
     /// - returns: A value of the requested type.
     /// - throws: `DecodingError.dataCorrupted` if values requested from the payload are corrupted, or if the given data is not a valid property list.
     /// - throws: An error if any value throws an error during decoding.
-    open func decode<T : Decodable>(_ type: T.Type, from data: Data) throws -> T {
+    open func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T {
         var format: PropertyListSerialization.PropertyListFormat = .binary
         return try decode(type, from: data, format: &format)
     }
@@ -649,7 +648,7 @@ open class PropertyListDecoder {
     /// - returns: A value of the requested type along with the detected format of the property list.
     /// - throws: `DecodingError.dataCorrupted` if values requested from the payload are corrupted, or if the given data is not a valid property list.
     /// - throws: An error if any value throws an error during decoding.
-    open func decode<T : Decodable>(_ type: T.Type, from data: Data, format: inout PropertyListSerialization.PropertyListFormat) throws -> T {
+    open func decode<T: Decodable>(_ type: T.Type, from data: Data, format: inout PropertyListSerialization.PropertyListFormat) throws -> T {
         let topLevel: Any
         do {
             topLevel = try PropertyListSerialization.propertyList(from: data, options: [], format: &format)
@@ -667,7 +666,7 @@ open class PropertyListDecoder {
     /// - returns: A value of the requested type.
     /// - throws: `DecodingError.dataCorrupted` if values requested from the payload are corrupted, or if the given data is not a valid property list.
     /// - throws: An error if any value throws an error during decoding.
-    internal func decode<T : Decodable>(_ type: T.Type, fromTopLevel container: Any) throws -> T {
+    internal func decode<T: Decodable>(_ type: T.Type, fromTopLevel container: Any) throws -> T {
         let decoder = _PlistDecoder(referencing: container, options: self.options)
         guard let value = try decoder.unbox(container, as: type) else {
             throw DecodingError.valueNotFound(type, DecodingError.Context(codingPath: [], debugDescription: "The given data did not contain a top-level value."))
@@ -679,7 +678,7 @@ open class PropertyListDecoder {
 
 // MARK: - _PlistDecoder
 
-fileprivate class _PlistDecoder : Decoder {
+private class _PlistDecoder: Decoder {
     // MARK: Properties
 
     /// The decoder's storage.
@@ -692,7 +691,7 @@ fileprivate class _PlistDecoder : Decoder {
     fileprivate(set) public var codingPath: [CodingKey]
 
     /// Contextual user-provided information for use during encoding.
-    public var userInfo: [CodingUserInfoKey : Any] {
+    public var userInfo: [CodingUserInfoKey: Any] {
         return self.options.userInfo
     }
 
@@ -715,8 +714,8 @@ fileprivate class _PlistDecoder : Decoder {
                                                                     debugDescription: "Cannot get keyed decoding container -- found null value instead."))
         }
 
-        guard let topContainer = self.storage.topContainer as? [String : Any] else {
-            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String : Any].self, reality: self.storage.topContainer)
+        guard let topContainer = self.storage.topContainer as? [String: Any] else {
+            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String: Any].self, reality: self.storage.topContainer)
         }
 
         let container = _PlistKeyedDecodingContainer<Key>(referencing: self, wrapping: topContainer)
@@ -744,7 +743,7 @@ fileprivate class _PlistDecoder : Decoder {
 
 // MARK: - Decoding Storage
 
-fileprivate struct _PlistDecodingStorage {
+private struct _PlistDecodingStorage {
     // MARK: Properties
 
     /// The container stack.
@@ -779,7 +778,7 @@ fileprivate struct _PlistDecodingStorage {
 
 // MARK: Decoding Containers
 
-fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingContainerProtocol {
+private struct _PlistKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerProtocol {
     typealias Key = K
 
     // MARK: Properties
@@ -788,7 +787,7 @@ fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingCo
     private let decoder: _PlistDecoder
 
     /// A reference to the container we're reading from.
-    private let container: [String : Any]
+    private let container: [String: Any]
 
     /// The path of coding keys taken to get to this point in decoding.
     private(set) public var codingPath: [CodingKey]
@@ -796,7 +795,7 @@ fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingCo
     // MARK: - Initialization
 
     /// Initializes `self` by referencing the given decoder and container.
-    fileprivate init(referencing decoder: _PlistDecoder, wrapping container: [String : Any]) {
+    fileprivate init(referencing decoder: _PlistDecoder, wrapping container: [String: Any]) {
         self.decoder = decoder
         self.container = container
         self.codingPath = decoder.codingPath
@@ -1033,7 +1032,7 @@ fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingCo
         return value
     }
 
-    public func decode<T : Decodable>(_ type: T.Type, forKey key: Key) throws -> T {
+    public func decode<T: Decodable>(_ type: T.Type, forKey key: Key) throws -> T {
         guard let entry = self.container[key.stringValue] else {
             throw DecodingError.keyNotFound(key, DecodingError.Context(codingPath: self.decoder.codingPath, debugDescription: "No value associated with key \(key) (\"\(key.stringValue)\")."))
         }
@@ -1058,8 +1057,8 @@ fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingCo
                                                                     debugDescription: "Cannot get nested keyed container -- no value found for key \"\(key.stringValue)\""))
         }
 
-        guard let dictionary = value as? [String : Any] else {
-            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String : Any].self, reality: value)
+        guard let dictionary = value as? [String: Any] else {
+            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String: Any].self, reality: value)
         }
 
         let container = _PlistKeyedDecodingContainer<NestedKey>(referencing: self.decoder, wrapping: dictionary)
@@ -1100,7 +1099,7 @@ fileprivate struct _PlistKeyedDecodingContainer<K : CodingKey> : KeyedDecodingCo
     }
 }
 
-fileprivate struct _PlistUnkeyedDecodingContainer : UnkeyedDecodingContainer {
+private struct _PlistUnkeyedDecodingContainer: UnkeyedDecodingContainer {
     // MARK: Properties
 
     /// A reference to the decoder we're reading from.
@@ -1372,7 +1371,7 @@ fileprivate struct _PlistUnkeyedDecodingContainer : UnkeyedDecodingContainer {
         return decoded
     }
 
-    public mutating func decode<T : Decodable>(_ type: T.Type) throws -> T {
+    public mutating func decode<T: Decodable>(_ type: T.Type) throws -> T {
         guard !self.isAtEnd else {
             throw DecodingError.valueNotFound(type, DecodingError.Context(codingPath: self.decoder.codingPath + [_PlistKey(index: self.currentIndex)], debugDescription: "Unkeyed container is at end."))
         }
@@ -1405,8 +1404,8 @@ fileprivate struct _PlistUnkeyedDecodingContainer : UnkeyedDecodingContainer {
                                                                     debugDescription: "Cannot get keyed decoding container -- found null value instead."))
         }
 
-        guard let dictionary = value as? [String : Any] else {
-            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String : Any].self, reality: value)
+        guard let dictionary = value as? [String: Any] else {
+            throw DecodingError._typeMismatch(at: self.codingPath, expectation: [String: Any].self, reality: value)
         }
 
         self.currentIndex += 1
@@ -1454,7 +1453,7 @@ fileprivate struct _PlistUnkeyedDecodingContainer : UnkeyedDecodingContainer {
     }
 }
 
-extension _PlistDecoder : SingleValueDecodingContainer {
+extension _PlistDecoder: SingleValueDecodingContainer {
     // MARK: SingleValueDecodingContainer Methods
 
     private func expectNonNull<T>(_ type: T.Type) throws {
@@ -1541,7 +1540,7 @@ extension _PlistDecoder : SingleValueDecodingContainer {
         return try self.unbox(self.storage.topContainer, as: String.self)!
     }
 
-    public func decode<T : Decodable>(_ type: T.Type) throws -> T {
+    public func decode<T: Decodable>(_ type: T.Type) throws -> T {
         try expectNonNull(type)
         return try self.unbox(self.storage.topContainer, as: type)!
     }
@@ -1780,7 +1779,7 @@ extension _PlistDecoder {
         return data
     }
 
-    fileprivate func unbox<T : Decodable>(_ value: Any, as type: T.Type) throws -> T? {
+    fileprivate func unbox<T: Decodable>(_ value: Any, as type: T.Type) throws -> T? {
         if type == Date.self || type == NSDate.self {
             return try self.unbox(value, as: Date.self) as? T
         } else if type == Data.self || type == NSData.self {
@@ -1793,19 +1792,19 @@ extension _PlistDecoder {
     }
 }
 
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 // Shared Plist Null Representation
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 
 // Since plists do not support null values by default, we will encode them as "$null".
-fileprivate let _plistNull = "$null"
-fileprivate let _plistNullNSString = NSString(string: _plistNull)
+private let _plistNull = "$null"
+private let _plistNullNSString = NSString(string: _plistNull)
 
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 // Shared Key Types
-//===----------------------------------------------------------------------===//
+// ===----------------------------------------------------------------------===//
 
-fileprivate struct _PlistKey : CodingKey {
+private struct _PlistKey: CodingKey {
     public var stringValue: String
     public var intValue: Int?
 

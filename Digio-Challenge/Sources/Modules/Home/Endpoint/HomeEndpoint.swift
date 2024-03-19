@@ -15,7 +15,7 @@ final class HomeEndpoint: NetworkEndpoint {
         return .get
     }
     
-    var headers: [String : String] {
+    var headers: [String: String] {
         networkConfiguration.defaultHeaders()
     }
     

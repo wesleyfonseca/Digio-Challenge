@@ -75,4 +75,3 @@ extension HomeHeaderView {
         titleLabel.text = "Olá, \(configuration.name)"
     }
 }
-

@@ -20,7 +20,7 @@
 
 /* Begin PBXBuildFile section */
 		014C8051513B32B940504954C63C6A72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		0193EB62A7018FCEFCAA40B7B72EBDEE /* Pods-Digio-ChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A091900AAC6ABEDB92F0C7CD878FC7 /* Pods-Digio-ChallengeTests-dummy.m */; };
+		0193EB62A7018FCEFCAA40B7B72EBDEE /* Pods-Digio-ChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB561A98EE42311F68B6660A4ADD12E /* Pods-Digio-ChallengeTests-dummy.m */; };
 		07319FC388250B963206DB0BF5262128 /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4C0F3B78D6D65ECCE492F1D0BEC0F /* CGPath.swift */; };
 		1D0EF6FBAF37BB930183B8F5AA719CD2 /* SnapshotTesting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 332D7CE754808934322510E43A069A3F /* SnapshotTesting-dummy.m */; };
 		28F1B4D31269CC69CB5F41DBBCEF5222 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F888443EA6819DF16D0FD5647DC939 /* Any.swift */; };
@@ -37,13 +37,12 @@
 		6235B3883B6D9B3EF262ACFF43631F3D /* SceneKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD86327E990BA97770DA37DAF51282 /* SceneKit.swift */; };
 		6FA42D338F2CDE1914908E7D0662AED5 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6552F7DC2F1EBDFAA6C822450EA5FBF3 /* Diff.swift */; };
 		70060B0C311FBDF840146EEE9B762220 /* PlistEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0242F81C8C9FD6218138E25C0482029 /* PlistEncoder.swift */; };
-		73868E6E87AA8DBF97001C3789B85398 /* Pods-Digio-Challenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B891B630788969EB6B89D52C3BC0380 /* Pods-Digio-Challenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73868E6E87AA8DBF97001C3789B85398 /* Pods-Digio-Challenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F57A679409F1B81E6E97BB2F54897222 /* Pods-Digio-Challenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78BBB110735B5BD1BDDC3CD4FC563323 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16180B117044EF66DDA80B55BFD29D /* Data.swift */; };
 		7F5C5DD662B656505ECF172E1DDC232E /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A2EF5A34A1E153BF911068EA7BC4E /* UIBezierPath.swift */; };
 		88DE0AA2E9071FD322F40132B5ACE852 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30009BD9E79825CBD3BC051778C2A918 /* String.swift */; };
 		9104476A4778BB28C819AB92599A5B6E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98FCDA5794A64FAEABCD3EC3A4D4D5 /* UIImage.swift */; };
 		928DBECCA86A6F98E4B42FA62C5FF051 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CC54061BD56A877575F1047DBA59F /* View.swift */; };
-		93AD1A3B9C7CF8BF3F0C8C673CF9D0F7 /* Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4C7706C85021CFDE859AECEF40000E /* Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		957508AA897C27F86D544CCF1CED1904 /* NSBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA8C6BC6A1150BD0B59C00434D3B60 /* NSBezierPath.swift */; };
 		96E71750BD8C847E125FAB3C7A336224 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B99E11BFD486617517F0498857D4F /* URLRequest.swift */; };
 		97BEDF828D70F8BE2BE4E917DD992C48 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F64F6268D850B4A7F4E7367438ABD /* NSImage.swift */; };
@@ -51,19 +50,17 @@
 		9D65BFC4B2C4B6102D6B7EC25A7CD739 /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B0B90EEB851C9853D025235475DBC /* NSViewController.swift */; };
 		9D6622CDE2793B13735F47C44A7743ED /* SnapshotTesting-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB299AE8810DB48007343FC4E4F670CA /* SnapshotTesting-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F6B241BE1332F18DFCC2BF32E03C42C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A1B6C3724F4153A3BE38D5D883EA9A /* UIView.swift */; };
-		A4EAC4717F8A0B264B4E09E95866B25B /* Pods-Digio-ChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 107C8966BC394D067497CE44C60CEF8F /* Pods-Digio-ChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4EAC4717F8A0B264B4E09E95866B25B /* Pods-Digio-ChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E38325E142A473CC1178C2CC542C02B0 /* Pods-Digio-ChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFE414B3E0D49B39A358DE524B0839D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		C56B3E1A07308BCC8376D15C735B1C25 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94EF8929D5899C5F3FCC7C0A69F589 /* CALayer.swift */; };
-		C59441636F4797D9FFDAB21C25E87CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		CFFD67104AE4ABBFEB3801F9B8149664 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977D7F4183F0CA86C690A2D76FD2AF5 /* Async.swift */; };
 		D0A29718080A06AB351F6FA41B725BEA /* XCTAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20339EDBE065F889BC60A7821F51D32 /* XCTAttachment.swift */; };
 		D3C4D4F28C0180E812B6BA5FC4F5015B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D99B09BD61070F97DDB31A2F8185E /* UIViewController.swift */; };
 		D7AE9DBB6C5D2522EB24A673921F9365 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D298F0C184442719A5C961D5119DA /* SwiftUIView.swift */; };
 		D8B98F25810827F8B9072A4EAA395D67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		DA787DFD55A7814418DE78F66BA70847 /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9FFD421FC1404B9583F8F55D6F0FA /* CaseIterable.swift */; };
-		EA675FDFD79085A21A937CA0C8922A23 /* Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E49EB502697561036402EE04389ED2 /* Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m */; };
 		EB5F8B0D9E74FD8A1724B04E6AACFABE /* Snapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861968E49A22281E2883AFF3B3B4C85A /* Snapshotting.swift */; };
-		F60BE6D5CE2629CC9599EE92222B4C22 /* Pods-Digio-Challenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F479E5083F60116C46D9F740DEFD20 /* Pods-Digio-Challenge-dummy.m */; };
+		F60BE6D5CE2629CC9599EE92222B4C22 /* Pods-Digio-Challenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06642D5EBF1D8B0E492599B4D03C0E48 /* Pods-Digio-Challenge-dummy.m */; };
 		FEB8176EE5F7E44C5399D94BC6DE0C46 /* String+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F211EC69C81A3D50C21B255202190 /* String+SpecialCharacters.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,13 +71,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = ADEAE7CDD604DE4F3072E6021A314487;
 			remoteInfo = SnapshotTesting;
-		};
-		7BE4BC752ECD4E1F8EF536D4C591B363 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
-			remoteInfo = SwiftLint;
 		};
 		E419EB86838B60D0377D8B813B399DC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,80 +89,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A7AC7C5701C1622ACF65686B204783 /* Pods-Digio-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		030D99B09BD61070F97DDB31A2F8185E /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Sources/SnapshotTesting/Snapshotting/UIViewController.swift; sourceTree = "<group>"; };
+		0406A22F149E661BC65473B6A4245292 /* Pods-Digio-ChallengeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-ChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		04E117EE4CE2E0F0FF4656FCB48A7D4F /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/SnapshotTesting/Snapshotting/Codable.swift; sourceTree = "<group>"; };
+		06642D5EBF1D8B0E492599B4D03C0E48 /* Pods-Digio-Challenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Digio-Challenge-dummy.m"; sourceTree = "<group>"; };
 		09D7DC6B79DE9F545B59B6C661092344 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTestCase.swift; path = Sources/SnapshotTesting/SnapshotTestCase.swift; sourceTree = "<group>"; };
 		0C03058EB2D48BE976C6B59003921E96 /* SnapshotTesting-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapshotTesting-Info.plist"; sourceTree = "<group>"; };
 		0C09F335C6E0B4227C177C8A08041E4C /* SnapshotTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapshotTesting.release.xcconfig; sourceTree = "<group>"; };
-		107C8966BC394D067497CE44C60CEF8F /* Pods-Digio-ChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Digio-ChallengeTests-umbrella.h"; sourceTree = "<group>"; };
-		10E74899080A0CDB8202ECA9E357257D /* Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1118358190803D3F40AAE4D0CB5E51E0 /* Pods-Digio-ChallengeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-ChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		124DE12FC85BD098AB33B0796DF0D2E0 /* Pods-Digio-Challenge */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Digio-Challenge"; path = Pods_Digio_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F06B9EA11F71221450DC558D789054 /* NSView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSView.swift; path = Sources/SnapshotTesting/Snapshotting/NSView.swift; sourceTree = "<group>"; };
 		181C8A0EA818A307527C9A5B7A3F8B51 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		1E74E2E7B5978BB23F7F9C20413DA0CF /* Pods-Digio-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
-		29F479E5083F60116C46D9F740DEFD20 /* Pods-Digio-Challenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Digio-Challenge-dummy.m"; sourceTree = "<group>"; };
+		1B12CF4856B08CF24147B9F1B0BCE26A /* Pods-Digio-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A94EF8929D5899C5F3FCC7C0A69F589 /* CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Sources/SnapshotTesting/Snapshotting/CALayer.swift; sourceTree = "<group>"; };
-		2C091E6CFAABBD9D794FC1330026530A /* Pods-Digio-ChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Digio-ChallengeTests.modulemap"; sourceTree = "<group>"; };
 		2D2B0B90EEB851C9853D025235475DBC /* NSViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSViewController.swift; path = Sources/SnapshotTesting/Snapshotting/NSViewController.swift; sourceTree = "<group>"; };
 		2E294A387D3FEB21463115656D09FA91 /* SpriteKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteKit.swift; path = Sources/SnapshotTesting/Snapshotting/SpriteKit.swift; sourceTree = "<group>"; };
 		30009BD9E79825CBD3BC051778C2A918 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Sources/SnapshotTesting/Snapshotting/String.swift; sourceTree = "<group>"; };
-		30FDD38DC05F4DEC4571574C96DB20DE /* Pods-Digio-Challenge-Digio-ChallengeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Digio-Challenge-Digio-ChallengeUITests.modulemap"; sourceTree = "<group>"; };
+		31643E777D83271D648514FA1DEECF14 /* Pods-Digio-Challenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-acknowledgements.plist"; sourceTree = "<group>"; };
 		332D7CE754808934322510E43A069A3F /* SnapshotTesting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapshotTesting-dummy.m"; sourceTree = "<group>"; };
-		3A4C7706C85021CFDE859AECEF40000E /* Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h"; sourceTree = "<group>"; };
-		3C6A685A4F041F47CE5F2363A684494D /* Pods-Digio-Challenge-Digio-ChallengeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-Digio-ChallengeUITests-Info.plist"; sourceTree = "<group>"; };
-		418394F1804C86EE6C3DAB8E01C8FCC2 /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0F211EC69C81A3D50C21B255202190 /* String+SpecialCharacters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+SpecialCharacters.swift"; path = "Sources/SnapshotTesting/Common/String+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		4B5CC54061BD56A877575F1047DBA59F /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Sources/SnapshotTesting/Common/View.swift; sourceTree = "<group>"; };
-		4B891B630788969EB6B89D52C3BC0380 /* Pods-Digio-Challenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Digio-Challenge-umbrella.h"; sourceTree = "<group>"; };
 		4CC9FFD421FC1404B9583F8F55D6F0FA /* CaseIterable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaseIterable.swift; path = Sources/SnapshotTesting/Snapshotting/CaseIterable.swift; sourceTree = "<group>"; };
 		4D0F64F6268D850B4A7F4E7367438ABD /* NSImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = Sources/SnapshotTesting/Snapshotting/NSImage.swift; sourceTree = "<group>"; };
 		4D3B99E11BFD486617517F0498857D4F /* URLRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Sources/SnapshotTesting/Snapshotting/URLRequest.swift; sourceTree = "<group>"; };
-		50EA79D503D65C9B0628D79A8D79EE52 /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5114BDB12545CFDAE5F8587D635A7319 /* Diffing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diffing.swift; path = Sources/SnapshotTesting/Diffing.swift; sourceTree = "<group>"; };
 		51ADD7CE4053DF782297FD464CE95B6F /* SnapshotTesting-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapshotTesting-prefix.pch"; sourceTree = "<group>"; };
-		57980A8751E6EF3F265DDA50059BD56F /* Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6552F7DC2F1EBDFAA6C822450EA5FBF3 /* Diff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Sources/SnapshotTesting/Diff.swift; sourceTree = "<group>"; };
 		69194AC0655F40FA0C9814A501C5927B /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		710217CF1A1F4AE11A0FA316D6698C8E /* Pods-Digio-Challenge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-Info.plist"; sourceTree = "<group>"; };
 		71A1B6C3724F4153A3BE38D5D883EA9A /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Sources/SnapshotTesting/Snapshotting/UIView.swift; sourceTree = "<group>"; };
-		74A091900AAC6ABEDB92F0C7CD878FC7 /* Pods-Digio-ChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Digio-ChallengeTests-dummy.m"; sourceTree = "<group>"; };
-		7582831ACDB67C08623BF24471EC33C2 /* Pods-Digio-ChallengeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Digio-ChallengeTests-frameworks.sh"; sourceTree = "<group>"; };
 		7977D7F4183F0CA86C690A2D76FD2AF5 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/SnapshotTesting/Async.swift; sourceTree = "<group>"; };
-		7BEEE2A1CEBFAC1E5CA141DC28D1F597 /* Pods-Digio-ChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-ChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7DB561A98EE42311F68B6660A4ADD12E /* Pods-Digio-ChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Digio-ChallengeTests-dummy.m"; sourceTree = "<group>"; };
 		83F8AD94112A3F016373A60F80BC78CE /* Pods-Digio-ChallengeTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Digio-ChallengeTests"; path = Pods_Digio_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858C61ACEC51E76AA84C25F0340CAAE2 /* Pods-Digio-ChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-ChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		860967711B908A8DBB80FB0A0104873A /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Sources/SnapshotTesting/Snapshotting/Description.swift; sourceTree = "<group>"; };
 		861968E49A22281E2883AFF3B3B4C85A /* Snapshotting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Snapshotting.swift; path = Sources/SnapshotTesting/Snapshotting.swift; sourceTree = "<group>"; };
-		895AC8D6D467EAA68F3119174C3D5716 /* Pods-Digio-Challenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Digio-Challenge.modulemap"; sourceTree = "<group>"; };
 		8C2A2EF5A34A1E153BF911068EA7BC4E /* UIBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBezierPath.swift; path = Sources/SnapshotTesting/Snapshotting/UIBezierPath.swift; sourceTree = "<group>"; };
 		8C98FCDA5794A64FAEABCD3EC3A4D4D5 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/SnapshotTesting/Snapshotting/UIImage.swift; sourceTree = "<group>"; };
 		8DA4C0F3B78D6D65ECCE492F1D0BEC0F /* CGPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPath.swift; path = Sources/SnapshotTesting/Snapshotting/CGPath.swift; sourceTree = "<group>"; };
 		8E16180B117044EF66DDA80B55BFD29D /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Sources/SnapshotTesting/Snapshotting/Data.swift; sourceTree = "<group>"; };
+		9160F47280B1C9BD9C14CA96A971031F /* Pods-Digio-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		92AD86327E990BA97770DA37DAF51282 /* SceneKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneKit.swift; path = Sources/SnapshotTesting/Snapshotting/SceneKit.swift; sourceTree = "<group>"; };
-		9BEB69295CB8BE34FF54DDBB89B29A84 /* Pods-Digio-ChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Digio-ChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		96F43C180DF674B0177E7DE417F557C6 /* Pods-Digio-ChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Digio-ChallengeTests.modulemap"; sourceTree = "<group>"; };
+		9B7C0F59A2DEFC217121EE89E42717FB /* Pods-Digio-ChallengeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Digio-ChallengeTests-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0242F81C8C9FD6218138E25C0482029 /* PlistEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlistEncoder.swift; path = Sources/SnapshotTesting/Common/PlistEncoder.swift; sourceTree = "<group>"; };
 		A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapshotTesting; path = SnapshotTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4ADFFEA4978D2768F3C3C445E0F716D /* Pods-Digio-Challenge-Digio-ChallengeUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Digio-Challenge-Digio-ChallengeUITests"; path = Pods_Digio_Challenge_Digio_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A55F2497F6080846B4D6B1B24E0C8096 /* Pods-Digio-Challenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Digio-Challenge-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A063D1C162BFBE047F3EC8875F583439 /* Pods-Digio-Challenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Digio-Challenge.modulemap"; sourceTree = "<group>"; };
+		A5D73CDE5E59C1B08652BFDE5C438535 /* Pods-Digio-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		A7CBE5A1DA9A9F5DC0BD9EDB0DC3F3B4 /* Pods-Digio-Challenge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-Info.plist"; sourceTree = "<group>"; };
+		B145AE2892B5AEEF09EDF60C79DA8D6D /* Pods-Digio-Challenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Digio-Challenge-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B4079C8F37E09FED14F8D5664E874F9D /* SnapshotTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapshotTesting.debug.xcconfig; sourceTree = "<group>"; };
 		B54D298F0C184442719A5C961D5119DA /* SwiftUIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = Sources/SnapshotTesting/Snapshotting/SwiftUIView.swift; sourceTree = "<group>"; };
-		B682F66AA8B23DC531564840C1405D70 /* Pods-Digio-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		C3DA8C6BC6A1150BD0B59C00434D3B60 /* NSBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSBezierPath.swift; path = Sources/SnapshotTesting/Snapshotting/NSBezierPath.swift; sourceTree = "<group>"; };
 		C6463A8B85B0EE8CCB7C2B5A633C1D83 /* Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Wait.swift; path = Sources/SnapshotTesting/Extensions/Wait.swift; sourceTree = "<group>"; };
-		C86EE79FFF09E9CFD81602305D638138 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C8E49EB502697561036402EE04389ED2 /* Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m"; sourceTree = "<group>"; };
 		CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CCE0AB17A48717299DC25BC33700A6A7 /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Sources/SnapshotTesting/Common/Internal.swift; sourceTree = "<group>"; };
 		CF40DC027090EED3E57A488120C2822F /* AssertSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertSnapshot.swift; path = Sources/SnapshotTesting/AssertSnapshot.swift; sourceTree = "<group>"; };
 		D20339EDBE065F889BC60A7821F51D32 /* XCTAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCTAttachment.swift; path = Sources/SnapshotTesting/Common/XCTAttachment.swift; sourceTree = "<group>"; };
 		D20BB10C3ACC5E6E2A295A10B5542EC1 /* SnapshotTesting.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapshotTesting.modulemap; sourceTree = "<group>"; };
+		DA163E22F6241CCCDD220DEDD9920DD1 /* Pods-Digio-ChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Digio-ChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E38325E142A473CC1178C2CC542C02B0 /* Pods-Digio-ChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Digio-ChallengeTests-umbrella.h"; sourceTree = "<group>"; };
 		E5BAEE60902410D1EFDFCC9E6437FD58 /* AssertInlineSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertInlineSnapshot.swift; path = Sources/SnapshotTesting/AssertInlineSnapshot.swift; sourceTree = "<group>"; };
 		E6F888443EA6819DF16D0FD5647DC939 /* Any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Any.swift; path = Sources/SnapshotTesting/Snapshotting/Any.swift; sourceTree = "<group>"; };
 		EB299AE8810DB48007343FC4E4F670CA /* SnapshotTesting-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapshotTesting-umbrella.h"; sourceTree = "<group>"; };
-		FD42004CE67F25746B96FCB6567F4244 /* Pods-Digio-Challenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Digio-Challenge-acknowledgements.plist"; sourceTree = "<group>"; };
+		F0E3B026DC4EF4BB954A266B71B1D51E /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F57A679409F1B81E6E97BB2F54897222 /* Pods-Digio-Challenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Digio-Challenge-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,14 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				014C8051513B32B940504954C63C6A72 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A120042F3A49AA0C5D1AA5ABD34C8F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C59441636F4797D9FFDAB21C25E87CF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,17 +185,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0652A999C9FF22083672390E5FE0CC22 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				124DE12FC85BD098AB33B0796DF0D2E0 /* Pods-Digio-Challenge */,
-				A4ADFFEA4978D2768F3C3C445E0F716D /* Pods-Digio-Challenge-Digio-ChallengeUITests */,
-				83F8AD94112A3F016373A60F80BC78CE /* Pods-Digio-ChallengeTests */,
-				A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0664C3B8FDDE8EADD07E259702B85B4E /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +192,22 @@
 			);
 			name = SwiftLint;
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		0E4A29F9938A2E2A5E9D187477251EDC /* Pods-Digio-Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				A063D1C162BFBE047F3EC8875F583439 /* Pods-Digio-Challenge.modulemap */,
+				B145AE2892B5AEEF09EDF60C79DA8D6D /* Pods-Digio-Challenge-acknowledgements.markdown */,
+				31643E777D83271D648514FA1DEECF14 /* Pods-Digio-Challenge-acknowledgements.plist */,
+				06642D5EBF1D8B0E492599B4D03C0E48 /* Pods-Digio-Challenge-dummy.m */,
+				A7CBE5A1DA9A9F5DC0BD9EDB0DC3F3B4 /* Pods-Digio-Challenge-Info.plist */,
+				F57A679409F1B81E6E97BB2F54897222 /* Pods-Digio-Challenge-umbrella.h */,
+				9160F47280B1C9BD9C14CA96A971031F /* Pods-Digio-Challenge.debug.xcconfig */,
+				A5D73CDE5E59C1B08652BFDE5C438535 /* Pods-Digio-Challenge.release.xcconfig */,
+			);
+			name = "Pods-Digio-Challenge";
+			path = "Target Support Files/Pods-Digio-Challenge";
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -301,20 +279,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7E771DC7196A64DC7D00914088793651 /* Pods-Digio-Challenge */ = {
+		3D0CE0F81916C3953F5BB3A7BDD68B3D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				895AC8D6D467EAA68F3119174C3D5716 /* Pods-Digio-Challenge.modulemap */,
-				A55F2497F6080846B4D6B1B24E0C8096 /* Pods-Digio-Challenge-acknowledgements.markdown */,
-				FD42004CE67F25746B96FCB6567F4244 /* Pods-Digio-Challenge-acknowledgements.plist */,
-				29F479E5083F60116C46D9F740DEFD20 /* Pods-Digio-Challenge-dummy.m */,
-				710217CF1A1F4AE11A0FA316D6698C8E /* Pods-Digio-Challenge-Info.plist */,
-				4B891B630788969EB6B89D52C3BC0380 /* Pods-Digio-Challenge-umbrella.h */,
-				1E74E2E7B5978BB23F7F9C20413DA0CF /* Pods-Digio-Challenge.debug.xcconfig */,
-				B682F66AA8B23DC531564840C1405D70 /* Pods-Digio-Challenge.release.xcconfig */,
+				0E4A29F9938A2E2A5E9D187477251EDC /* Pods-Digio-Challenge */,
+				AAADD76EE031FFF9F5898AA94C2014B1 /* Pods-Digio-ChallengeTests */,
 			);
-			name = "Pods-Digio-Challenge";
-			path = "Target Support Files/Pods-Digio-Challenge";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4F99C3EB388D2D1EA3DEA7DB8F2C388D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				124DE12FC85BD098AB33B0796DF0D2E0 /* Pods-Digio-Challenge */,
+				83F8AD94112A3F016373A60F80BC78CE /* Pods-Digio-ChallengeTests */,
+				A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		974814B39C0012DECD183BBB91B32103 /* iOS */ = {
@@ -324,23 +305,6 @@
 				5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		99CC651B0A3523256C786A372350A96E /* Pods-Digio-ChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				2C091E6CFAABBD9D794FC1330026530A /* Pods-Digio-ChallengeTests.modulemap */,
-				9BEB69295CB8BE34FF54DDBB89B29A84 /* Pods-Digio-ChallengeTests-acknowledgements.markdown */,
-				7BEEE2A1CEBFAC1E5CA141DC28D1F597 /* Pods-Digio-ChallengeTests-acknowledgements.plist */,
-				74A091900AAC6ABEDB92F0C7CD878FC7 /* Pods-Digio-ChallengeTests-dummy.m */,
-				7582831ACDB67C08623BF24471EC33C2 /* Pods-Digio-ChallengeTests-frameworks.sh */,
-				1118358190803D3F40AAE4D0CB5E51E0 /* Pods-Digio-ChallengeTests-Info.plist */,
-				107C8966BC394D067497CE44C60CEF8F /* Pods-Digio-ChallengeTests-umbrella.h */,
-				418394F1804C86EE6C3DAB8E01C8FCC2 /* Pods-Digio-ChallengeTests.debug.xcconfig */,
-				01A7AC7C5701C1622ACF65686B204783 /* Pods-Digio-ChallengeTests.release.xcconfig */,
-			);
-			name = "Pods-Digio-ChallengeTests";
-			path = "Target Support Files/Pods-Digio-ChallengeTests";
 			sourceTree = "<group>";
 		};
 		9D642249DEDC505B8067B3CCD66CBDD4 /* Support Files */ = {
@@ -358,20 +322,21 @@
 			path = "../Target Support Files/SnapshotTesting";
 			sourceTree = "<group>";
 		};
-		A1E700101073CB325CD1145D75B17D06 /* Pods-Digio-Challenge-Digio-ChallengeUITests */ = {
+		AAADD76EE031FFF9F5898AA94C2014B1 /* Pods-Digio-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				30FDD38DC05F4DEC4571574C96DB20DE /* Pods-Digio-Challenge-Digio-ChallengeUITests.modulemap */,
-				57980A8751E6EF3F265DDA50059BD56F /* Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.markdown */,
-				10E74899080A0CDB8202ECA9E357257D /* Pods-Digio-Challenge-Digio-ChallengeUITests-acknowledgements.plist */,
-				C8E49EB502697561036402EE04389ED2 /* Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m */,
-				3C6A685A4F041F47CE5F2363A684494D /* Pods-Digio-Challenge-Digio-ChallengeUITests-Info.plist */,
-				3A4C7706C85021CFDE859AECEF40000E /* Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h */,
-				50EA79D503D65C9B0628D79A8D79EE52 /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */,
-				C86EE79FFF09E9CFD81602305D638138 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */,
+				96F43C180DF674B0177E7DE417F557C6 /* Pods-Digio-ChallengeTests.modulemap */,
+				DA163E22F6241CCCDD220DEDD9920DD1 /* Pods-Digio-ChallengeTests-acknowledgements.markdown */,
+				858C61ACEC51E76AA84C25F0340CAAE2 /* Pods-Digio-ChallengeTests-acknowledgements.plist */,
+				7DB561A98EE42311F68B6660A4ADD12E /* Pods-Digio-ChallengeTests-dummy.m */,
+				9B7C0F59A2DEFC217121EE89E42717FB /* Pods-Digio-ChallengeTests-frameworks.sh */,
+				0406A22F149E661BC65473B6A4245292 /* Pods-Digio-ChallengeTests-Info.plist */,
+				E38325E142A473CC1178C2CC542C02B0 /* Pods-Digio-ChallengeTests-umbrella.h */,
+				F0E3B026DC4EF4BB954A266B71B1D51E /* Pods-Digio-ChallengeTests.debug.xcconfig */,
+				1B12CF4856B08CF24147B9F1B0BCE26A /* Pods-Digio-ChallengeTests.release.xcconfig */,
 			);
-			name = "Pods-Digio-Challenge-Digio-ChallengeUITests";
-			path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests";
+			name = "Pods-Digio-ChallengeTests";
+			path = "Target Support Files/Pods-Digio-ChallengeTests";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -380,19 +345,9 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				309FCDB491E2BD3305B65F73FD9D09A2 /* Pods */,
-				0652A999C9FF22083672390E5FE0CC22 /* Products */,
-				D25579E5125F0C98FB90E60C121DFCA0 /* Targets Support Files */,
+				4F99C3EB388D2D1EA3DEA7DB8F2C388D /* Products */,
+				3D0CE0F81916C3953F5BB3A7BDD68B3D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D25579E5125F0C98FB90E60C121DFCA0 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7E771DC7196A64DC7D00914088793651 /* Pods-Digio-Challenge */,
-				A1E700101073CB325CD1145D75B17D06 /* Pods-Digio-Challenge-Digio-ChallengeUITests */,
-				99CC651B0A3523256C786A372350A96E /* Pods-Digio-ChallengeTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,14 +377,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E43E1251C535460C1BCE192C4C5331D0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93AD1A3B9C7CF8BF3F0C8C673CF9D0F7 /* Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -450,25 +397,6 @@
 			name = "Pods-Digio-Challenge";
 			productName = Pods_Digio_Challenge;
 			productReference = 124DE12FC85BD098AB33B0796DF0D2E0 /* Pods-Digio-Challenge */;
-			productType = "com.apple.product-type.framework";
-		};
-		94F7687CDEBDFCA96357344D8E56FA3A /* Pods-Digio-Challenge-Digio-ChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4AD2252523C7B582053AF94698C1FD6 /* Build configuration list for PBXNativeTarget "Pods-Digio-Challenge-Digio-ChallengeUITests" */;
-			buildPhases = (
-				E43E1251C535460C1BCE192C4C5331D0 /* Headers */,
-				3F88D5448232BEE508CB02965413D33D /* Sources */,
-				6A120042F3A49AA0C5D1AA5ABD34C8F2 /* Frameworks */,
-				26F5345A71A81E1854EEBA28CBB41A48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				350319C2CCBBF5C98F4F0F9B5C3C2011 /* PBXTargetDependency */,
-			);
-			name = "Pods-Digio-Challenge-Digio-ChallengeUITests";
-			productName = Pods_Digio_Challenge_Digio_ChallengeUITests;
-			productReference = A4ADFFEA4978D2768F3C3C445E0F716D /* Pods-Digio-Challenge-Digio-ChallengeUITests */;
 			productType = "com.apple.product-type.framework";
 		};
 		ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */ = {
@@ -527,12 +455,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0652A999C9FF22083672390E5FE0CC22 /* Products */;
+			productRefGroup = 4F99C3EB388D2D1EA3DEA7DB8F2C388D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				949F5137159482917D49CB1E5804EFAD /* Pods-Digio-Challenge */,
-				94F7687CDEBDFCA96357344D8E56FA3A /* Pods-Digio-Challenge-Digio-ChallengeUITests */,
 				E1E963E9B7129E7F8A4ACDF550C83131 /* Pods-Digio-ChallengeTests */,
 				ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
@@ -541,13 +468,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		26F5345A71A81E1854EEBA28CBB41A48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		784E99D6858C7D6AED646F7A4CDBC4E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,14 +492,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F88D5448232BEE508CB02965413D33D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA675FDFD79085A21A937CA0C8922A23 /* Pods-Digio-Challenge-Digio-ChallengeUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F1D32E7C78E4688126A415C56B9F1F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,12 +557,6 @@
 			name = "Pods-Digio-Challenge";
 			target = 949F5137159482917D49CB1E5804EFAD /* Pods-Digio-Challenge */;
 			targetProxy = E419EB86838B60D0377D8B813B399DC6 /* PBXContainerItemProxy */;
-		};
-		350319C2CCBBF5C98F4F0F9B5C3C2011 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 7BE4BC752ECD4E1F8EF536D4C591B363 /* PBXContainerItemProxy */;
 		};
 		559518976969F6C00D7F2DC0A06F523A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -787,46 +693,9 @@
 			};
 			name = Release;
 		};
-		489B9CD30E2A6B19120E737D3D33A4DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50EA79D503D65C9B0628D79A8D79EE52 /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4A5F6AF60C8C337ED672F3C8ED22F241 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B682F66AA8B23DC531564840C1405D70 /* Pods-Digio-Challenge.release.xcconfig */;
+			baseConfigurationReference = A5D73CDE5E59C1B08652BFDE5C438535 /* Pods-Digio-Challenge.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -864,7 +733,7 @@
 		};
 		5931C1221F038841021E25735820DBF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 418394F1804C86EE6C3DAB8E01C8FCC2 /* Pods-Digio-ChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = F0E3B026DC4EF4BB954A266B71B1D51E /* Pods-Digio-ChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -963,7 +832,7 @@
 		};
 		75BCBF0B0159E332165F321167BD06BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E74E2E7B5978BB23F7F9C20413DA0CF /* Pods-Digio-Challenge.debug.xcconfig */;
+			baseConfigurationReference = 9160F47280B1C9BD9C14CA96A971031F /* Pods-Digio-Challenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -998,47 +867,9 @@
 			};
 			name = Debug;
 		};
-		7AAEC5706A875C177F4B436F96AFB366 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C86EE79FFF09E9CFD81602305D638138 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		87B737EF825D0F833EAA1E50AF52709A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01A7AC7C5701C1622ACF65686B204783 /* Pods-Digio-ChallengeTests.release.xcconfig */;
+			baseConfigurationReference = 1B12CF4856B08CF24147B9F1B0BCE26A /* Pods-Digio-ChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1170,15 +1001,6 @@
 			buildConfigurations = (
 				E9E1A48A750B946DE9877594C6E735E4 /* Debug */,
 				26EA5A9600226D2B7D8D25152A304F3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B4AD2252523C7B582053AF94698C1FD6 /* Build configuration list for PBXNativeTarget "Pods-Digio-Challenge-Digio-ChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				489B9CD30E2A6B19120E737D3D33A4DE /* Debug */,
-				7AAEC5706A875C177F4B436F96AFB366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

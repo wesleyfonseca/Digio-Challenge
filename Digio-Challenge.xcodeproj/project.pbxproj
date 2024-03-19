@@ -118,10 +118,8 @@
 		4480DFA52BA5E5B2005454FD /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		4591C37939055E2EB4950718 /* Pods_Digio_Challenge_Digio_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_Challenge_Digio_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		822ED64C2A6E4EEF54AC060F /* Pods-Digio-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge/Pods-Digio-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		8C96031399086C61BF6E5CE0 /* Pods-Digio-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge.release.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge/Pods-Digio-Challenge.release.xcconfig"; sourceTree = "<group>"; };
-		8EECB6EB106F59081B25754C /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Digio-Challenge-Digio-ChallengeUITests/Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDA50B71217E956D66A535BB /* Pods_Digio_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4822B1273E4B05075959FFB /* Pods-Digio-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio-ChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,8 +149,6 @@
 			children = (
 				822ED64C2A6E4EEF54AC060F /* Pods-Digio-Challenge.debug.xcconfig */,
 				8C96031399086C61BF6E5CE0 /* Pods-Digio-Challenge.release.xcconfig */,
-				8EECB6EB106F59081B25754C /* Pods-Digio-Challenge-Digio-ChallengeUITests.debug.xcconfig */,
-				68926B73221A162F11F38462 /* Pods-Digio-Challenge-Digio-ChallengeUITests.release.xcconfig */,
 				617CC962AB6DF1FEB5C91FFE /* Pods-Digio-ChallengeTests.debug.xcconfig */,
 				F4822B1273E4B05075959FFB /* Pods-Digio-ChallengeTests.release.xcconfig */,
 			);
@@ -492,6 +488,7 @@
 				4480DF2A2BA46048005454FD /* Sources */,
 				4480DF2B2BA46048005454FD /* Frameworks */,
 				4480DF2C2BA46048005454FD /* Resources */,
+				4423DB7A2BA938DA00CDEEED /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -640,6 +637,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digio-ChallengeTests/Pods-Digio-ChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4423DB7A2BA938DA00CDEEED /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

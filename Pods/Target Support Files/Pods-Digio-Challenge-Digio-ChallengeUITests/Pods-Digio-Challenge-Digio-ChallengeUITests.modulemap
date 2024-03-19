@@ -1,6 +1,0 @@
-framework module Pods_Digio_Challenge_Digio_ChallengeUITests {
-  umbrella header "Pods-Digio-Challenge-Digio-ChallengeUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

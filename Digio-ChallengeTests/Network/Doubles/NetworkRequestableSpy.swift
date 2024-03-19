@@ -4,7 +4,7 @@ import XCTest
 @testable import Digio_Challenge
 
 final class NetworkRequestableSpy: NetworkRequestable {
-
+    
     enum ServiceState {
         case success
         case failure
@@ -14,7 +14,7 @@ final class NetworkRequestableSpy: NetworkRequestable {
     func request<DataType>(
         endpoint: NetworkEndpoint,
         completion: @escaping (Result<DataType?, NetworkErrorType>) -> Void)
-    where DataType : Decodable, DataType : Encodable {
+    where DataType: Decodable, DataType: Encodable {
         
         switch serviceState {
         case .success:
