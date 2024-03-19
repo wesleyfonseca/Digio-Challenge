@@ -108,6 +108,7 @@ final class HomeViewModel: HomeViewModelInterface {
         case .spotlight:
             let dataSpotlight = data.spotlight[index]
             let detailData = DetailDTO(
+                type: collectionConfiguration.type,
                 title: "Spotlight",
                 name: dataSpotlight.name,
                 description: dataSpotlight.description,
@@ -117,6 +118,7 @@ final class HomeViewModel: HomeViewModelInterface {
         case .cash:
             let dataSpotlight = data.cash
             let detailData = DetailDTO(
+                type: collectionConfiguration.type,
                 title: "digio Cash",
                 name: dataSpotlight.title,
                 description: dataSpotlight.description,
@@ -126,6 +128,7 @@ final class HomeViewModel: HomeViewModelInterface {
         case .products:
             let dataSpotlight = data.products[index]
             let detailData = DetailDTO(
+                type: collectionConfiguration.type,
                 title: "Produto",
                 name: dataSpotlight.name,
                 description: dataSpotlight.description,

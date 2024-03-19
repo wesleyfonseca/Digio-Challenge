@@ -2,7 +2,9 @@ import Foundation
 
 protocol DetailViewModelInterface: AnyObject {
     var detailTitle: String { get }
+    var type: HomeCollectionCell.HomeCollectionCellType { get }
     var productDetailConfiguration: ProductDetailView.Configuration { get }
+    var bannerDetailConfiguration: BannerDetailView.Configuration { get }
 }
 
 final class DetailViewModel: DetailViewModelInterface {
@@ -12,7 +14,19 @@ final class DetailViewModel: DetailViewModelInterface {
         return detailData.title
     }
     
+    var type: HomeCollectionCell.HomeCollectionCellType {
+        return detailData.type
+    }
+    
     var productDetailConfiguration: ProductDetailView.Configuration {
+        return .init(
+            imageUrl: detailData.imageUrl,
+            name: detailData.name,
+            description: detailData.description
+        )
+    }
+    
+    var bannerDetailConfiguration: BannerDetailView.Configuration {
         return .init(
             imageUrl: detailData.imageUrl,
             name: detailData.name,

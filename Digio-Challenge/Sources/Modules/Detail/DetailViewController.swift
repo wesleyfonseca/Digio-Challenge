@@ -26,6 +26,13 @@ final class DetailViewController: UIViewController {
     
     private let productDetailView: ProductDetailView = {
         let view = ProductDetailView()
+        view.isHidden = true
+        return view
+    }()
+    
+    private let bannerDetailView: BannerDetailView = {
+        let view = BannerDetailView()
+        view.isHidden = true
         return view
     }()
     
@@ -56,7 +63,14 @@ final class DetailViewController: UIViewController {
     // MARK: - Methods
     private func build() {
         titleLabel.text = viewModel.detailTitle
-        productDetailView.build(configuration: viewModel.productDetailConfiguration)
+        
+        if viewModel.type == .products {
+            productDetailView.build(configuration: viewModel.productDetailConfiguration)
+            productDetailView.isHidden = false
+        } else {
+            bannerDetailView.build(configuration: viewModel.bannerDetailConfiguration)
+            bannerDetailView.isHidden = false
+        }
     }
 }
 
@@ -67,6 +81,7 @@ extension DetailViewController: ViewCodeProtocol {
         view.addSubview(lineView)
         view.addSubview(stackView)
         stackView.addArrangedSubview(productDetailView)
+        stackView.addArrangedSubview(bannerDetailView)
     }
     
     func setupConstraints() {
