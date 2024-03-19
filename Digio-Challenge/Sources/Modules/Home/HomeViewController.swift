@@ -73,7 +73,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        guard let configuration = viewModel.tableCellConfiguration(indexPath: indexPath) else {
+        guard
+            let rowType = HomeRowsType(rawValue: indexPath.row),
+            let configuration = viewModel.tableCellConfiguration(rowType: rowType)
+        else {
             return UITableViewCell()
         }
         

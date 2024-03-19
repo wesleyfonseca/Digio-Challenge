@@ -6,7 +6,7 @@ protocol HomeViewModelInterface: AnyObject {
     var delegate: HomeViewModelDelegate? { get set }
     
     func fetchData()
-    func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration?
+    func tableCellConfiguration(rowType: HomeRowsType) -> HomeTableCell.Configuration?
     func detailData(collectionConfiguration: HomeCollectionCell.Configuration, index: Int) -> DetailDTO?
 }
 
@@ -88,16 +88,14 @@ final class HomeViewModel: HomeViewModelInterface {
         }
     }
     
-    func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration? {
-        switch indexPath.row {
-        case 0:
+    func tableCellConfiguration(rowType: HomeRowsType) -> HomeTableCell.Configuration? {
+        switch rowType {
+        case .spotlight:
             return spotlightViewConfiguration
-        case 1:
+        case .cash:
             return cashViewConfiguration
-        case 2:
+        case .products:
             return productsViewConfiguration
-        default:
-            return nil
         }
     }
     
@@ -137,4 +135,10 @@ final class HomeViewModel: HomeViewModelInterface {
             return detailData
         }
     }
+}
+
+enum HomeRowsType: Int {
+    case spotlight
+    case cash
+    case products
 }

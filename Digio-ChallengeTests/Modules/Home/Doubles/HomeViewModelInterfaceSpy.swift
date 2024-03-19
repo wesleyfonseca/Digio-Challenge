@@ -14,11 +14,11 @@ final class HomeViewModelInterfaceSpy: HomeViewModelInterface {
     }
     
     var tableCellConfigurationCalled = false
-    var tableCellConfigurationParamsPassed: IndexPath?
+    var tableCellConfigurationParamsPassed: HomeRowsType?
     var tableCellConfigurationReturn: HomeTableCell.Configuration?
-    func tableCellConfiguration(indexPath: IndexPath) -> HomeTableCell.Configuration? {
+    func tableCellConfiguration(rowType: HomeRowsType) -> HomeTableCell.Configuration? {
         tableCellConfigurationCalled = true
-        tableCellConfigurationParamsPassed = indexPath
+        tableCellConfigurationParamsPassed = rowType
         guard let tableCellConfigurationReturn else { return nil }
         return tableCellConfigurationReturn
     }

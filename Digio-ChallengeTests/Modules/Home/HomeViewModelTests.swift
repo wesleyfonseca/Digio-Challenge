@@ -35,7 +35,7 @@ final class HomeViewModelTests: XCTestCase {
     func test_tableCell_shouldConfigurSpotlight() {
         serviceSpy.serviceState = .success
         sut.fetchData()
-        let spotlightConfig = sut.tableCellConfiguration(indexPath: IndexPath(row: 0, section: 0))
+        let spotlightConfig = sut.tableCellConfiguration(rowType: HomeRowsType(rawValue: 0) ?? .spotlight)
         XCTAssertNotNil(spotlightConfig)
         XCTAssertNotNil(spotlightConfig?.collectionConfiguration.spotlightConfiguration)
         XCTAssertNil(spotlightConfig?.collectionConfiguration.cashConfiguration)
@@ -46,7 +46,7 @@ final class HomeViewModelTests: XCTestCase {
     func test_tableCell_shouldConfigurCash() {
         serviceSpy.serviceState = .success
         sut.fetchData()
-        let cashConfig = sut.tableCellConfiguration(indexPath: IndexPath(row: 1, section: 0))
+        let cashConfig = sut.tableCellConfiguration(rowType: HomeRowsType(rawValue: 1) ?? .spotlight)
         XCTAssertNotNil(cashConfig)
         XCTAssertNotNil(cashConfig?.collectionConfiguration.cashConfiguration)
         XCTAssertNil(cashConfig?.collectionConfiguration.spotlightConfiguration)
@@ -57,7 +57,7 @@ final class HomeViewModelTests: XCTestCase {
     func test_tableCell_shouldConfigurProducts() {
         serviceSpy.serviceState = .success
         sut.fetchData()
-        let productsConfig = sut.tableCellConfiguration(indexPath: IndexPath(row: 2, section: 0))
+        let productsConfig = sut.tableCellConfiguration(rowType: HomeRowsType(rawValue: 2) ?? .spotlight)
         XCTAssertNotNil(productsConfig)
         XCTAssertNotNil(productsConfig?.collectionConfiguration.productsConfiguration)
         XCTAssertNil(productsConfig?.collectionConfiguration.spotlightConfiguration)
