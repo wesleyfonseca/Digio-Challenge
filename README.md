@@ -35,5 +35,10 @@ SnapshotTesting is a Swift library facilitating snapshot testing, verifying UI o
 
 
 ## App
-#### Home
+#### Home Screen
 <img src="https://github.com/wesleyfonseca/Digio-Challenge/assets/47370603/dad14478-30bd-45bf-a3d3-fec38c72f789" width="200">
+
+
+#### Detail Screen
+<img src="https://github.com/wesleyfonseca/Digio-Challenge/assets/47370603/0863a04a-d894-4cbd-b2f9-860797a8a179" width="200">
+<img src="https://github.com/wesleyfonseca/Digio-Challenge/assets/47370603/147b703b-4f0d-493d-84d5-5389691ec759" width="200">
