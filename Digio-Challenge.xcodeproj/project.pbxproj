@@ -10,6 +10,9 @@
 		44213BFB2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */; };
 		44213BFD2BA9299500E13A72 /* HomeRouterInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */; };
 		44213BFF2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */; };
+		4423DB752BA9322F00CDEEED /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4423DB742BA9322F00CDEEED /* HomeRouterTests.swift */; };
+		4423DB772BA9328500CDEEED /* HomeRouterDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4423DB762BA9328500CDEEED /* HomeRouterDelegateSpy.swift */; };
+		4423DB792BA9335C00CDEEED /* HomeBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4423DB782BA9335C00CDEEED /* HomeBuilderTests.swift */; };
 		442728CE2BA867E3006B9424 /* BannerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728CD2BA867E3006B9424 /* BannerImageView.swift */; };
 		442728D02BA876BF006B9424 /* ProductImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728CF2BA876BF006B9424 /* ProductImageView.swift */; };
 		442728D22BA8C1C0006B9424 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442728D12BA8C1C0006B9424 /* DetailBuilder.swift */; };
@@ -68,6 +71,9 @@
 		44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshot.swift; sourceTree = "<group>"; };
 		44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterInterfaceSpy.swift; sourceTree = "<group>"; };
 		44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelInterfaceSpy.swift; sourceTree = "<group>"; };
+		4423DB742BA9322F00CDEEED /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		4423DB762BA9328500CDEEED /* HomeRouterDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterDelegateSpy.swift; sourceTree = "<group>"; };
+		4423DB782BA9335C00CDEEED /* HomeBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderTests.swift; sourceTree = "<group>"; };
 		442728CD2BA867E3006B9424 /* BannerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImageView.swift; sourceTree = "<group>"; };
 		442728CF2BA876BF006B9424 /* ProductImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageView.swift; sourceTree = "<group>"; };
 		442728D12BA8C1C0006B9424 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
@@ -184,6 +190,8 @@
 				442728E12BA91CAC006B9424 /* Doubles */,
 				442728E22BA91CBF006B9424 /* HomeViewModelTests.swift */,
 				44213BFA2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift */,
+				4423DB742BA9322F00CDEEED /* HomeRouterTests.swift */,
+				4423DB782BA9335C00CDEEED /* HomeBuilderTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				442728EA2BA92137006B9424 /* HomeViewModelDelegateSpy.swift */,
 				44213BFC2BA9299400E13A72 /* HomeRouterInterfaceSpy.swift */,
 				44213BFE2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift */,
+				4423DB762BA9328500CDEEED /* HomeRouterDelegateSpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -682,10 +691,13 @@
 			files = (
 				442728E72BA91D42006B9424 /* NetworkRequestableSpy.swift in Sources */,
 				442728EB2BA92137006B9424 /* HomeViewModelDelegateSpy.swift in Sources */,
+				4423DB792BA9335C00CDEEED /* HomeBuilderTests.swift in Sources */,
 				44213BFD2BA9299500E13A72 /* HomeRouterInterfaceSpy.swift in Sources */,
+				4423DB752BA9322F00CDEEED /* HomeRouterTests.swift in Sources */,
 				44213BFB2BA9284C00E13A72 /* HomeViewControllerSnapshot.swift in Sources */,
 				44213BFF2BA929EF00E13A72 /* HomeViewModelInterfaceSpy.swift in Sources */,
 				442728E32BA91CBF006B9424 /* HomeViewModelTests.swift in Sources */,
+				4423DB772BA9328500CDEEED /* HomeRouterDelegateSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
